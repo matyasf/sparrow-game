@@ -12,6 +12,7 @@ using Sparrow.ResourceLoading;
 using Sparrow.Textures;
 using SparrowSharp.Display;
 using SparrowSharp.Utils;
+using SparrowGame;
 
 namespace SparrowSharp.Samples.Desktop
 {
@@ -26,39 +27,54 @@ namespace SparrowSharp.Samples.Desktop
 
         public ComputeShaderTest()
         {
-            GetGPUInfo();
+            GPUInfo.PrintGPUInfo();
 
-            GL.GenTextures(1, out tex_output);
-            GL.ActiveTexture(TextureUnit.Texture0);
-            GL.BindTexture(TextureTarget.Texture2D, tex_output);
+            // init texture, set its parameters
+            GL.GenTextures(1, out tex_output); // generate texture name
+            GL.ActiveTexture(TextureUnit.Texture0); // activates a texture unit
+            GL.BindTexture(TextureTarget.Texture2D, tex_output); // bind a named texture to a texturing target
             int clampToEdge = (int)All.ClampToEdge;
             GL.TexParameterI(TextureTarget.Texture2D, TextureParameterName.TextureWrapS, ref clampToEdge);
             GL.TexParameterI(TextureTarget.Texture2D, TextureParameterName.TextureWrapT, ref clampToEdge);
-
             int texFilter = (int)TextureMagFilter.Linear;
             GL.TexParameterI(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, ref texFilter);
             GL.TexParameterI(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, ref texFilter);
+            //TexImage2D loads the supplied pixel data into a texture
             GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba32f, tex_w, tex_h, 0, PixelFormat.Rgba, PixelType.Float, IntPtr.Zero);
+            // Bind a single image from the texture to image unit 0
             GL.BindImageTexture(0, tex_output, 0, false, 0, TextureAccess.WriteOnly, SizedInternalFormat.Rgba32f);
-
+           
+            // init compute shader
             int ray_shader = GL.CreateShader(ShaderType.ComputeShader);
             GL.ShaderSource(ray_shader, 1, new string[] { GetComputeShader() }, (int[])null);
             GL.CompileShader(ray_shader);
-            // check for compilation errors as per normal here
+
+            GPUInfo.checkShaderCompileError(ray_shader);
 
             ray_program = GL.CreateProgram();
             GL.AttachShader(ray_program, ray_shader);
             GL.LinkProgram(ray_program);
-            // check for linking errors and validate program as per normal here
+
+            GPUInfo.checkShaderLinkError(ray_program);
+
             GLTexture tx = new GLTexture(tex_output, tex_w, tex_h, false, 1.0f, false);
             base.InitImage(tx);
         }
 
+        float someNumber = 0;
+
         public override void Render(RenderSupport support)
         {
+            // TODO move around lights
+            // TODO upload geometry texture
             GL.UseProgram(ray_program);
+
+            int testVarLocation = GL.GetUniformLocation(ray_program, "someData");
+            // Set the uniform
+            someNumber = someNumber < 1 ? someNumber + 0.01f : 0;
+            GL.Uniform1(testVarLocation, someNumber);
             GL.DispatchCompute(tex_w, tex_h, 1);
-            // make sure writing to image has finished before read
+            // make sure writing to image has finished before read. Put this as close to the etx sampler code as possible
             GL.MemoryBarrier(MemoryBarrierFlags.ShaderImageAccessBarrierBit);
             base.Render(support);
         }
@@ -66,15 +82,17 @@ namespace SparrowSharp.Samples.Desktop
 
         public string GetComputeShader()
         {
-            const string source =
-                @"
+            const string source = @"
             #version 430
+            
+            uniform float someData; // passed from the app
+            
             layout (local_size_x = 1, local_size_y = 1) in;
-            layout (rgba32f, binding = 0) uniform image2D img_output;
+            layout (rgba32f, binding = 0) uniform image2D img_output; // output is image unit 0
             
             void main () {
               // base pixel colour for image
-              vec4 pixel = vec4 (0.0, 0.7, 0.0, 1.0);
+              vec4 pixel = vec4 (0.0, someData, 0.0, 1.0);
               // get index in global work group i.e x,y position
               ivec2 pixel_coords = ivec2 (gl_GlobalInvocationID.xy);
   
@@ -106,29 +124,6 @@ namespace SparrowSharp.Samples.Desktop
             return source;
         }
         
-        private void GetGPUInfo()
-        {
-            string versionOpenGL = GL.GetString(StringName.Version);
-            Console.Out.WriteLine("GL version:" + versionOpenGL);
-
-            int[] work_grp_cnt = new int[3];
-            GetIndexedPName maxWorkGroupCount = (GetIndexedPName)All.MaxComputeWorkGroupCount;
-            GL.GetInteger(maxWorkGroupCount, 0, out work_grp_cnt[0]);
-            GL.GetInteger(maxWorkGroupCount, 1, out work_grp_cnt[1]);
-            GL.GetInteger(maxWorkGroupCount, 2, out work_grp_cnt[2]);
-
-            Console.Out.WriteLine("max global (total) work group size " + string.Join(",", work_grp_cnt));
-
-            int[] work_grp_size = new int[3];
-            GetIndexedPName maxComputeGroupSize = (GetIndexedPName)All.MaxComputeWorkGroupSize;
-            GL.GetInteger(maxComputeGroupSize, 0, out work_grp_size[0]);
-            GL.GetInteger(maxComputeGroupSize, 1, out work_grp_size[1]);
-            GL.GetInteger(maxComputeGroupSize, 2, out work_grp_size[2]);
-
-            Console.Out.WriteLine("max local (in one shader) work group sizes " + string.Join(",", work_grp_size));
-        }
-
-       
         public override Rectangle BoundsInSpace(DisplayObject targetSpace)
         {
             return new Rectangle(0, 0, 234, 234);

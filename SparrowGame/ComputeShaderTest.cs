@@ -28,45 +28,41 @@ namespace SparrowSharp.Samples.Desktop
         public ComputeShaderTest()
         {
             GPUInfo.PrintGPUInfo();
+            
+            TextureProperties texProps = new TextureProperties
+            {
+                TextureFormat = TextureFormat.Rgba8888,
+                Scale = 1.0f,
+                Width = tex_w,
+                Height = tex_h,
+                NumMipmaps = 0,
+                GenerateMipmaps = false,
+                PremultipliedAlpha = true
+            };
+            GLTexture tt = new GLTexture(IntPtr.Zero, texProps);
+            tex_output = tt.Name;
+            GL.BindImageTexture(0, tex_output, 0, false, 0, TextureAccess.WriteOnly, SizedInternalFormat.Rgba8);
 
-            // init texture, set its parameters
-            GL.GenTextures(1, out tex_output); // generate texture name
-            GL.ActiveTexture(TextureUnit.Texture0); // activates a texture unit
-            GL.BindTexture(TextureTarget.Texture2D, tex_output); // bind a named texture to a texturing target
-            int clampToEdge = (int)All.ClampToEdge;
-            GL.TexParameterI(TextureTarget.Texture2D, TextureParameterName.TextureWrapS, ref clampToEdge);
-            GL.TexParameterI(TextureTarget.Texture2D, TextureParameterName.TextureWrapT, ref clampToEdge);
-            int texFilter = (int)TextureMagFilter.Linear;
-            GL.TexParameterI(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, ref texFilter);
-            GL.TexParameterI(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, ref texFilter);
-            //TexImage2D loads the supplied pixel data into a texture
-            GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba32f, tex_w, tex_h, 0, PixelFormat.Rgba, PixelType.Float, IntPtr.Zero);
-            // Bind a single image from the texture to image unit 0
-            GL.BindImageTexture(0, tex_output, 0, false, 0, TextureAccess.WriteOnly, SizedInternalFormat.Rgba32f);
-           
+            GLTexture bg = new TextureLoader().LoadLocalImage("../../testbg.png");
+            GL.BindImageTexture(1, bg.Name, 0, false, 0, TextureAccess.ReadOnly, SizedInternalFormat.Rgba8);
+
             // init compute shader
             int ray_shader = GL.CreateShader(ShaderType.ComputeShader);
             GL.ShaderSource(ray_shader, 1, new string[] { GetComputeShader() }, (int[])null);
             GL.CompileShader(ray_shader);
-
             GPUInfo.checkShaderCompileError(ray_shader);
-
             ray_program = GL.CreateProgram();
             GL.AttachShader(ray_program, ray_shader);
             GL.LinkProgram(ray_program);
-
             GPUInfo.checkShaderLinkError(ray_program);
-
-            GLTexture tx = new GLTexture(tex_output, tex_w, tex_h, false, 1.0f, false);
-            base.InitImage(tx);
+            
+            base.InitImage(tt);
         }
 
         float someNumber = 0;
 
         public override void Render(RenderSupport support)
         {
-            // TODO move around lights
-            // TODO upload geometry texture
             GL.UseProgram(ray_program);
 
             int testVarLocation = GL.GetUniformLocation(ray_program, "someData");
@@ -88,14 +84,16 @@ namespace SparrowSharp.Samples.Desktop
             uniform float someData; // passed from the app
             
             layout (local_size_x = 1, local_size_y = 1) in;
-            layout (rgba32f, binding = 0) uniform image2D img_output; // output is image unit 0
-            
+            layout (rgba8, binding = 0) uniform image2D img_output;
+            layout (rgba8, binding = 1) uniform readonly image2D bgTex;
+           
             void main () {
-              // base pixel colour for image
-              vec4 pixel = vec4 (0.0, someData, 0.0, 1.0);
               // get index in global work group i.e x,y position
               ivec2 pixel_coords = ivec2 (gl_GlobalInvocationID.xy);
-  
+
+              vec4 bgpix = imageLoad(bgTex, pixel_coords);
+              vec4 pixel = vec4 (bgpix.r, someData, 0.0, 0.8);
+
               float max_x = 5.0;
               float max_y = 5.0;
               ivec2 dims = imageSize (img_output); // fetch image dimensions
@@ -114,7 +112,6 @@ namespace SparrowSharp.Samples.Desktop
               float bsqmc = b * b - c;
               // hit one or both sides
               if (bsqmc >= 0.0) {
-                //pixel = vec4 (0.4, 0.4, 1.0, 1.0);
                 pixel = vec4 (bsqmc, 0.4, 1.0, 1.0);
               }
   

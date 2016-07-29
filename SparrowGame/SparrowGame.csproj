@@ -93,4 +93,7 @@
   <ItemGroup>
     <None Include="bigstar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="testbg.png" />
+  </ItemGroup>
 </Project>

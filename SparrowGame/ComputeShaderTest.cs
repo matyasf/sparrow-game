@@ -13,6 +13,8 @@ using Sparrow.Textures;
 using SparrowSharp.Display;
 using SparrowSharp.Utils;
 using SparrowGame;
+using OpenTK.Input;
+using OpenTK;
 
 namespace SparrowSharp.Samples.Desktop
 {
@@ -46,6 +48,9 @@ namespace SparrowSharp.Samples.Desktop
             GLTexture bg = new TextureLoader().LoadLocalImage("../../testbg.png");
             GL.BindImageTexture(1, bg.Name, 0, false, 0, TextureAccess.ReadOnly, SizedInternalFormat.Rgba8);
 
+            GLTexture transp = new TextureLoader().LoadLocalImage("../../testbg_transparency.png");
+            GL.BindImageTexture(2, transp.Name, 0, false, 0, TextureAccess.ReadOnly, SizedInternalFormat.Rgba8);
+
             // init compute shader
             int ray_shader = GL.CreateShader(ShaderType.ComputeShader);
             GL.ShaderSource(ray_shader, 1, new string[] { GetComputeShader() }, (int[])null);
@@ -59,16 +64,15 @@ namespace SparrowSharp.Samples.Desktop
             base.InitImage(tt);
         }
 
-        float someNumber = 0;
-
         public override void Render(RenderSupport support)
         {
             GL.UseProgram(ray_program);
 
-            int testVarLocation = GL.GetUniformLocation(ray_program, "someData");
             // Set the uniform
-            someNumber = someNumber < 1 ? someNumber + 0.01f : 0;
-            GL.Uniform1(testVarLocation, someNumber);
+            int testVarLocation = GL.GetUniformLocation(ray_program, "lightPos");
+            var mouse = Mouse.GetState();
+            //Console.Out.WriteLine("m " + mouseCoords[0] + " " + mouseCoords[1]);
+            GL.Uniform2(testVarLocation, (float)mouse.X, (float)mouse.Y);
             GL.DispatchCompute(tex_w, tex_h, 1);
             // make sure writing to image has finished before read. Put this as close to the etx sampler code as possible
             GL.MemoryBarrier(MemoryBarrierFlags.ShaderImageAccessBarrierBit);
@@ -81,42 +85,24 @@ namespace SparrowSharp.Samples.Desktop
             const string source = @"
             #version 430
             
-            uniform float someData; // passed from the app
+            uniform vec2 lightPos; // passed from the app
             
-            layout (local_size_x = 1, local_size_y = 1) in;
+            layout (local_size_x = 1, local_size_y = 1) in; // should be a multiple of 32 on Nvidia, 64 on AMD; >256 might not work
             layout (rgba8, binding = 0) uniform image2D img_output;
-            layout (rgba8, binding = 1) uniform readonly image2D bgTex;
-           
+            layout (rgba8, binding = 1) uniform readonly image2D bgTex; // determines color TODO remove
+            layout (rgba8, binding = 1) uniform readonly image2D transpTex; // determines transparency
+
             void main () {
-              // get index in global work group i.e x,y position
-              ivec2 pixel_coords = ivec2 (gl_GlobalInvocationID.xy);
+              ivec2 global_coords = ivec2 (gl_GlobalInvocationID.xy); // get postion in global work group
+              ivec2 local_coords = ivec2 (gl_LocalInvocationID.xy);// get position in local work group
+              // determine coordinates where rendering ends
+              // do the algo
+              vec4 bgpix = imageLoad(bgTex, global_coords);
+              vec2 lightP = lightPos / 100;
+              vec4 pixel = vec4 (bgpix.r, lightP.x, lightP.y, 0.8);
 
-              vec4 bgpix = imageLoad(bgTex, pixel_coords);
-              vec4 pixel = vec4 (bgpix.r, someData, 0.0, 0.8);
-
-              float max_x = 5.0;
-              float max_y = 5.0;
-              ivec2 dims = imageSize (img_output); // fetch image dimensions
-              float x = (float(pixel_coords.x * 2 - dims.x) / dims.x);
-              float y = (float(pixel_coords.y * 2 - dims.y) / dims.y);
-              vec3 ray_o = vec3 (x * max_x, y * max_y, 0.0); // origin
-              vec3 ray_d = vec3 (0.0, 0.0, -1.0); // ortho direction
-              
-              // sphere  
-              vec3 sphere_c = vec3 (0.0, 0.0, -10.0);
-              float sphere_r = 1.0;
-              
-              vec3 omc = ray_o - sphere_c;
-              float b = dot (ray_d, omc);
-              float c = dot (omc, omc) - sphere_r * sphere_r;
-              float bsqmc = b * b - c;
-              // hit one or both sides
-              if (bsqmc >= 0.0) {
-                pixel = vec4 (bsqmc, 0.4, 1.0, 1.0);
-              }
-  
               // output to a specific pixel in the image
-              imageStore (img_output, pixel_coords, pixel);
+              imageStore (img_output, global_coords, pixel);
             }";
             return source;
         }

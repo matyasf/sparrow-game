@@ -15,6 +15,8 @@ using SparrowSharp.Utils;
 using SparrowGame;
 using OpenTK.Input;
 using OpenTK;
+using System.IO;
+using System.Reflection;
 
 namespace SparrowSharp.Samples.Desktop
 {
@@ -53,7 +55,7 @@ namespace SparrowSharp.Samples.Desktop
 
             // init compute shader
             int ray_shader = GL.CreateShader(ShaderType.ComputeShader);
-            GL.ShaderSource(ray_shader, 1, new string[] { GetComputeShader() }, (int[])null);
+            GL.ShaderSource(ray_shader, 1, new string[] { LoadText("SparrowGame.lightComputeShader.glsl") }, (int[])null);
             GL.CompileShader(ray_shader);
             GPUInfo.checkShaderCompileError(ray_shader);
             ray_program = GL.CreateProgram();
@@ -62,6 +64,23 @@ namespace SparrowSharp.Samples.Desktop
             GPUInfo.checkShaderLinkError(ray_program);
             
             base.InitImage(tt);
+        }
+
+        public string LoadText(string filename)
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            Stream stream = assembly.GetManifestResourceStream(filename);
+            string[] ee = assembly.GetManifestResourceNames();
+            try
+            {
+                StreamReader reader = new StreamReader(stream);
+                return reader.ReadToEnd();
+            }
+            catch (ArgumentNullException ex)
+            {
+                Console.Out.WriteLine("unable to load file "  + filename + " " + ex);
+                return "";
+            }
         }
 
         public override void Render(RenderSupport support)
@@ -73,40 +92,12 @@ namespace SparrowSharp.Samples.Desktop
             var mouse = Mouse.GetState();
             //Console.Out.WriteLine("m " + mouseCoords[0] + " " + mouseCoords[1]);
             GL.Uniform2(testVarLocation, (float)mouse.X, (float)mouse.Y);
-            GL.DispatchCompute(tex_w, tex_h, 1);
+            GL.DispatchCompute(4, 1, 1);
             // make sure writing to image has finished before read. Put this as close to the etx sampler code as possible
             GL.MemoryBarrier(MemoryBarrierFlags.ShaderImageAccessBarrierBit);
             base.Render(support);
         }
 
-
-        public string GetComputeShader()
-        {
-            const string source = @"
-            #version 430
-            
-            uniform vec2 lightPos; // passed from the app
-            
-            layout (local_size_x = 1, local_size_y = 1) in; // should be a multiple of 32 on Nvidia, 64 on AMD; >256 might not work
-            layout (rgba8, binding = 0) uniform image2D img_output;
-            layout (rgba8, binding = 1) uniform readonly image2D bgTex; // determines color TODO remove
-            layout (rgba8, binding = 1) uniform readonly image2D transpTex; // determines transparency
-
-            void main () {
-              ivec2 global_coords = ivec2 (gl_GlobalInvocationID.xy); // get postion in global work group
-              ivec2 local_coords = ivec2 (gl_LocalInvocationID.xy);// get position in local work group
-              // determine coordinates where rendering ends
-              // do the algo
-              vec4 bgpix = imageLoad(bgTex, global_coords);
-              vec2 lightP = lightPos / 100;
-              vec4 pixel = vec4 (bgpix.r, lightP.x, lightP.y, 0.8);
-
-              // output to a specific pixel in the image
-              imageStore (img_output, global_coords, pixel);
-            }";
-            return source;
-        }
-        
         public override Rectangle BoundsInSpace(DisplayObject targetSpace)
         {
             return new Rectangle(0, 0, 234, 234);

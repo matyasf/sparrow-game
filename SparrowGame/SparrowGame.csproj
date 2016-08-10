@@ -92,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bigstar.png" />
+    <EmbeddedResource Include="lightComputeShader.glsl" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="testbg.png" />

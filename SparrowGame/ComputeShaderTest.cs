@@ -70,7 +70,6 @@ namespace SparrowSharp.Samples.Desktop
         {
             var assembly = Assembly.GetExecutingAssembly();
             Stream stream = assembly.GetManifestResourceStream(filename);
-            string[] ee = assembly.GetManifestResourceNames();
             try
             {
                 StreamReader reader = new StreamReader(stream);

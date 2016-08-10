@@ -96,5 +96,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="testbg.png" />
+    <Content Include="testbg_transparency.png" />
   </ItemGroup>
 </Project>

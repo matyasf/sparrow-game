@@ -1,22 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using OpenTK.Graphics.OpenGL4;
 using Sparrow.Display;
 using Sparrow.Core;
-using Sparrow;
 using Sparrow.Geom;
 using Sparrow.ResourceLoading;
 using Sparrow.Textures;
-using SparrowSharp.Display;
 using SparrowSharp.Utils;
 using SparrowGame;
 using OpenTK.Input;
-using OpenTK;
 using System.IO;
 using System.Reflection;
+using Sparrow;
 
 namespace SparrowSharp.Samples.Desktop
 {
@@ -41,7 +35,7 @@ namespace SparrowSharp.Samples.Desktop
                 Height = tex_h,
                 NumMipmaps = 0,
                 GenerateMipmaps = false,
-                PremultipliedAlpha = true
+                PremultipliedAlpha = false
             };
             GLTexture tt = new GLTexture(IntPtr.Zero, texProps);
             tex_output = tt.Name;
@@ -55,7 +49,7 @@ namespace SparrowSharp.Samples.Desktop
 
             // init compute shader
             int ray_shader = GL.CreateShader(ShaderType.ComputeShader);
-            GL.ShaderSource(ray_shader, 1, new string[] { LoadText("SparrowGame.lightComputeShader.glsl") }, (int[])null);
+            GL.ShaderSource(ray_shader, 1, new string[] { LoadString("SparrowGame.lightComputeShader.glsl") }, (int[])null);
             GL.CompileShader(ray_shader);
             GPUInfo.checkShaderCompileError(ray_shader);
             ray_program = GL.CreateProgram();
@@ -66,7 +60,7 @@ namespace SparrowSharp.Samples.Desktop
             base.InitImage(tt);
         }
 
-        public string LoadText(string filename)
+        public string LoadString(string filename)
         {
             var assembly = Assembly.GetExecutingAssembly();
             Stream stream = assembly.GetManifestResourceStream(filename);
@@ -86,9 +80,12 @@ namespace SparrowSharp.Samples.Desktop
         {
             GL.UseProgram(ray_program);
 
+            DesktopViewController dvc = (DesktopViewController)SparrowSharpApp.NativeWindow;
+            var mouse = dvc.Mouse;
+
             // Set the uniform
             int testVarLocation = GL.GetUniformLocation(ray_program, "lightPos");
-            var mouse = Mouse.GetState();
+            //var mouse = Mouse.GetState();
             //Console.Out.WriteLine("m " + mouseCoords[0] + " " + mouseCoords[1]);
             GL.Uniform2(testVarLocation, (float)mouse.X, (float)mouse.Y);
             GL.DispatchCompute(4, 1, 1);
@@ -99,7 +96,7 @@ namespace SparrowSharp.Samples.Desktop
 
         public override Rectangle BoundsInSpace(DisplayObject targetSpace)
         {
-            return new Rectangle(0, 0, 234, 234);
+            return new Rectangle(0, 0, 512, 512);
         }
     }
 }

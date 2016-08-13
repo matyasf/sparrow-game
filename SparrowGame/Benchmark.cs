@@ -30,7 +30,6 @@ namespace Sparrow.Samples
 
             // the container will hold all test objects
             _container = new Sprite();
-           
 
             EnterFrame += EnterFrameHandler;
             AddedToStage += AddedToStageHandler;
@@ -49,7 +48,7 @@ namespace Sparrow.Samples
             AddChild(test);
 
             AddChild(_container);
-            AddTestObjects(10);
+            //AddTestObjects(3);
         }
 
         private void AddTestObjects(int numObjects)
@@ -60,7 +59,7 @@ namespace Sparrow.Samples
             for (int i = 0; i < numObjects; ++i)
             {   
                 Image egg = new Image(textures[0]);
-                if (i < 5)
+                if (i < 2)
                 {
                     ColorMatrix cm = new ColorMatrix();
                     cm.AdjustSaturation(-0.8f);
@@ -139,12 +138,12 @@ namespace Sparrow.Samples
 
                 _elapsed = _frameCount = 0;
             }
-*/
+
             for (int i = 0; i < _container.NumChildren; i++)
             {
                 DisplayObject child = _container.GetChild(i);
                 child.Rotation += 0.05f;    
-            } 
+            } */
         }
     }
 }

@@ -1,10 +1,6 @@
 using System;
-using System.Collections.Generic;
 using Sparrow.Display;
-using Sparrow;
-using OpenTK.Graphics.ES20;
 using Sparrow.Textures;
-using SparrowSharp.Display;
 using Sparrow.ResourceLoading;
 using Sparrow.Core;
 using SparrowSharp.Filters;
@@ -24,8 +20,15 @@ namespace Sparrow.Samples
 
         public Benchmark()
         {
-            GLTexture star = SimpleTextureLoader.LoadLocalImage("../../bigstar.png");
-            GLTexture bird = SimpleTextureLoader.LoadLocalImage("../../benchmark_object.png");
+            
+#if __WINDOWS__     
+            GLTexture star = SimpleTextureLoader.LoadLocalImage("../../../assets/bigstar.png");
+            GLTexture bird = SimpleTextureLoader.LoadLocalImage("../../../assets/benchmark_object.png");   
+#else
+            GLTexture star = SimpleTextureLoader.LoadAndroidResource(SparrowGame.Droid.Resource.Drawable.bigstar);
+            GLTexture bird = SimpleTextureLoader.LoadAndroidResource(SparrowGame.Droid.Resource.Drawable.benchmark_object);
+#endif
+
             textures = new Texture[] { bird, star };
 
             // the container will hold all test objects

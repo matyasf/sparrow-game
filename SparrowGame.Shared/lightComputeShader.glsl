@@ -16,13 +16,13 @@ void main () {
     if (global_coords < 2) {// on the left or right
     endPoint.y = local_coords;
         if (global_coords == 1) { // right
-            endPoint.x = 512;
+            endPoint.x = txrsiz;
         }
     }
     else {// on the top or bottom
         endPoint.x = local_coords;
         if (global_coords == 3) {
-            endPoint.y = 512;
+            endPoint.y = txrsiz;
         }
     }
     // calculate light to the endpoint
@@ -42,6 +42,7 @@ void main () {
 		for (i = 0; i < txrsiz; i++) {
             coords.x = int(t.x);
             coords.y = int(t.y);
+
 			// calculate transparency
 			transpPixel = imageLoad(transpTex, coords);   
             currentAlpha = (transpPixel.b + transpPixel.g * 10.0 + transpPixel.r * 100.0) / 111.0;

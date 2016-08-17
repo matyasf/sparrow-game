@@ -1,11 +1,10 @@
 ﻿using System;
+using Sparrow.Core;
 
 #if __WINDOWS__
 using OpenTK.Graphics.OpenGL4;
 #elif __ANDROID__
 using OpenTK.Graphics.ES20;
-using Android.Opengl;
-using Java.Nio;
 #endif
 
 namespace SparrowGame
@@ -28,20 +27,30 @@ namespace SparrowGame
             GetIndexedPName maxComputeGroupSize = (GetIndexedPName)All.MaxComputeWorkGroupSize;
             GL.GetInteger(maxComputeGroupSize, 0, out work_grp_size[0]);
             GL.GetInteger(maxComputeGroupSize, 1, out work_grp_size[1]);
-            GL.GetInteger(maxComputeGroupSize, 2, out work_grp_size[2]);
+            GL.GetInteger(maxComputeGroupSize, 2, out work_grp_size[2]); 
 #else
-            int maxWorkGroupCount = GLES31.GlMaxComputeWorkGroupCount;
-            IntBuffer maxCount = IntBuffer.Allocate(3);
-            GLES20.GlGetIntegerv(maxWorkGroupCount, maxCount);
-            maxCount.Get(work_grp_cnt);
 
-            int maxComputeGroupSize = GLES31.GlMaxComputeWorkGroupSize;
-            IntBuffer maxSize = IntBuffer.Allocate(3);
-            GLES20.GlGetIntegerv(maxComputeGroupSize, maxSize);
-            maxSize.Get(work_grp_size);
+            /* According to Quallcomm docs:
+             
+             GL_MAX_COMPUTE_WORK_GROUP_COUNT is guaranteed that the limit will not be less than 65535 in any of the
+                three dimensions.
+
+             GL_MAX_COMPUTE_WORK_GROUP_SIZE The maximum size is guaranteed to be at least 128 in the case of the x and y
+                dimensions, and 64 in the case of z                        GL_MAX_COMPUTE_WORK_GROUP_INVOCATIONS is guaranteed to be no lower than 128.            */
+            OpenTK.Graphics.ES31.GL.GetInteger(OpenTK.Graphics.ES31.All.MaxComputeWorkGroupCount, 0, out work_grp_cnt[0]);
+            OpenTK.Graphics.ES31.GL.GetInteger(OpenTK.Graphics.ES31.All.MaxComputeWorkGroupCount, 1, out work_grp_cnt[1]);
+            OpenTK.Graphics.ES31.GL.GetInteger(OpenTK.Graphics.ES31.All.MaxComputeWorkGroupCount, 2, out work_grp_cnt[2]);
+
+            OpenTK.Graphics.ES31.GL.GetInteger(OpenTK.Graphics.ES31.All.MaxComputeWorkGroupSize, 0, out work_grp_size[0]);
+            OpenTK.Graphics.ES31.GL.GetInteger(OpenTK.Graphics.ES31.All.MaxComputeWorkGroupSize, 1, out work_grp_size[1]);
+            OpenTK.Graphics.ES31.GL.GetInteger(OpenTK.Graphics.ES31.All.MaxComputeWorkGroupSize, 2, out work_grp_size[2]);
+
+            int maxComputeWorkGroupInvocations; 
+            OpenTK.Graphics.ES31.GL.GetInteger(OpenTK.Graphics.ES31.All.MaxComputeWorkGroupInvocations, out maxComputeWorkGroupInvocations);
 #endif
             Console.Out.WriteLine("max global (total) work group size " + string.Join(",", work_grp_cnt));
             Console.Out.WriteLine("max local (in one shader) work group sizes " + string.Join(",", work_grp_size));
+            Console.Out.WriteLine("max total local workgroup elements " + maxComputeWorkGroupInvocations);
         }
 
         public static void checkShaderCompileError(int shaderId)

@@ -1,11 +1,11 @@
-﻿// version is added based on platform
+﻿#version 310 es
             
-uniform vec2 lightPos; // passed from the app
+uniform highp vec2 lightPos; // passed from the app
             
 layout (local_size_x = 512, local_size_y = 1) in; // should be a multiple of 32 on Nvidia, 64 on AMD; >256 might not work
-layout (rgba8, binding = 0) uniform image2D img_output;
-layout (rgba8, binding = 1) uniform readonly image2D colorTex; // determines color
-layout (rgba8, binding = 2) uniform readonly image2D transpTex; // determines transparency
+layout (rgba8, binding = 0) uniform restrict writeonly highp image2D img_output;
+layout (rgba8, binding = 1) uniform readonly highp image2D colorTex; // determines color
+layout (rgba8, binding = 2) uniform readonly highp image2D transpTex; // determines transparency
 
 void main () {
     float global_coords = float(gl_WorkGroupID.x); // postion in global work group; 0 = left, 1 = right, 2 = top, 3 = bottom
@@ -55,7 +55,6 @@ void main () {
 			
 			//uvec4 iOut = uvec4(uint(outPixel.r * 256.0), uint(outPixel.g * 256.0), uint(outPixel.b * 256.0), uint(outPixel.a * 256.0));
 			imageStore(img_output, coords, outPixel);
-			//imageStore(img_output, ivec2(3, 6), vec4(0,0,0,0));
 
 			if (dot(endPoint - t, dt) <= 0.000f) break;
 			//if (outPixel.r + outPixel.g + outPixel.b <= 0.001f) break;

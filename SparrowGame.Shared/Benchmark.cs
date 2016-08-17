@@ -52,7 +52,7 @@ namespace Sparrow.Samples
             AddChild(test);
 
             AddChild(_container);
-            //AddTestObjects(3);
+            AddTestObjects(3);
         }
 
         private void AddTestObjects(int numObjects)
@@ -116,38 +116,6 @@ namespace Sparrow.Samples
             
             _elapsed += passedTime / 1000;
             ++_frameCount;
-            /*
-            if (_frameCount % _waitFrames == 0)
-            {
-                float targetFPS = 60;
-                float realFPS = _waitFrames / _elapsed;
-                //Console.WriteLine ("FPS: " + realFPS);
-                if (realFPS >= targetFPS)
-                {
-                    int numObjects = _failCount != 0 ? 5 : 25;
-                    AddTestObjects(numObjects);
-                    _failCount = 0;
-                }
-                else
-                {
-                    ++_failCount;
-
-                    if (_failCount > 15)
-                        _waitFrames = 5; // slow down creation process to be more exact
-                    if (_failCount > 20)
-                        _waitFrames = 10;
-                    if (_failCount == 25)
-                        BenchmarkComplete(); // target fps not reached for a while
-                }
-
-                _elapsed = _frameCount = 0;
-            }
-
-            for (int i = 0; i < _container.NumChildren; i++)
-            {
-                DisplayObject child = _container.GetChild(i);
-                child.Rotation += 0.05f;    
-            } */
         }
     }
 }

@@ -65,18 +65,6 @@ namespace SparrowSharp.Samples.Desktop
 #endif
 
             string shaderStr = ResourceLoader.GetEmbeddedResourceString("lightComputeShader.glsl");
-#if __WINDOWS__
-            shaderStr = 
-                @"#version 430
-                #define highp
-                #define mediump
-                #define lowp
-                " + shaderStr;
-#else
-            shaderStr =
-                @"#version 310 es
-                " + shaderStr;
-#endif
 
             GL.ShaderSource(ray_shader, 1, new string[] { shaderStr }, (int[])null);
             GL.CompileShader(ray_shader);
@@ -106,7 +94,8 @@ namespace SparrowSharp.Samples.Desktop
             // make sure writing to image has finished before read. Put this as close to the etx sampler code as possible
             GL.MemoryBarrier(MemoryBarrierFlags.ShaderImageAccessBarrierBit);
 #else
-            GLES20.GlUniform2f(testVarLocation, 234.0f, 234.0f);
+            Random rnd = new Random();
+            GLES20.GlUniform2f(testVarLocation, (float)rnd.Next(0, 500), (float)rnd.Next(0, 500));
             GLES31.GlDispatchCompute(4, 1, 1);
             GLES31.GlMemoryBarrier(GLES31.GlAllShaderBits); // TODO might work with lower barrier 
 #endif

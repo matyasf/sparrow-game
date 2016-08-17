@@ -5,6 +5,7 @@ using Sparrow.ResourceLoading;
 using Sparrow.Core;
 using SparrowSharp.Filters;
 using SparrowSharp.Samples.Desktop;
+using SparrowGame.Shared;
 
 namespace Sparrow.Samples
 {
@@ -20,13 +21,13 @@ namespace Sparrow.Samples
 
         public Benchmark()
         {
-            
-#if __WINDOWS__     
-            GLTexture star = SimpleTextureLoader.LoadLocalImage("../../../assets/bigstar.png");
-            GLTexture bird = SimpleTextureLoader.LoadLocalImage("../../../assets/benchmark_object.png");   
+
+#if __WINDOWS__
+            GLTexture star = SimpleTextureLoader.LoadImageFromStream( ResourceLoader.GetEmbeddedResourceStream("bigstar.png") );
+            GLTexture bird = SimpleTextureLoader.LoadImageFromStream( ResourceLoader.GetEmbeddedResourceStream("benchmark_object.png") );
 #else
-            GLTexture star = SimpleTextureLoader.LoadAndroidResource(SparrowGame.Droid.Resource.Drawable.bigstar);
-            GLTexture bird = SimpleTextureLoader.LoadAndroidResource(SparrowGame.Droid.Resource.Drawable.benchmark_object);
+            GLTexture star = SimpleTextureLoader.LoadAndroidResource(SparrowGame.Resource.Drawable.bigstar);
+            GLTexture bird = SimpleTextureLoader.LoadAndroidResource(SparrowGame.Resource.Drawable.benchmark_object);
 #endif
 
             textures = new Texture[] { bird, star };

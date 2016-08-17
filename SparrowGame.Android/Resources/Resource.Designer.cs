@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("SparrowGame.Droid.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("SparrowGame.Resource", IsApplication=true)]
 
-namespace SparrowGame.Droid
+namespace SparrowGame
 {
 	
 	

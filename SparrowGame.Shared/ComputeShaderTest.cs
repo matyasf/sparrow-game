@@ -6,10 +6,8 @@ using Sparrow.ResourceLoading;
 using Sparrow.Textures;
 using SparrowSharp.Utils;
 using SparrowGame;
-using OpenTK.Input;
-using System.IO;
-using System.Reflection;
 using Sparrow;
+using SparrowGame.Shared;
 
 #if __WINDOWS__
 using OpenTK.Graphics.OpenGL4;
@@ -48,8 +46,8 @@ namespace SparrowSharp.Samples.Desktop
 
 
 #if __WINDOWS__
-            GLTexture bg = new TextureLoader().LoadLocalImage("../../../assets/testbg.png");
-            GLTexture transp = new TextureLoader().LoadLocalImage("../../../assets/testbg_transparency.png");
+            GLTexture bg = SimpleTextureLoader.LoadImageFromStream(ResourceLoader.GetEmbeddedResourceStream("testbg.png"));
+            GLTexture transp = SimpleTextureLoader.LoadImageFromStream(ResourceLoader.GetEmbeddedResourceStream("testbg_transparency.png"));
             GL.BindImageTexture(0, tex_output, 0, false, 0, TextureAccess.WriteOnly, SizedInternalFormat.Rgba8);
             GL.BindImageTexture(1, bg.Name, 0, false, 0, TextureAccess.ReadOnly, SizedInternalFormat.Rgba8);
             GL.BindImageTexture(2, transp.Name, 0, false, 0, TextureAccess.ReadOnly, SizedInternalFormat.Rgba8);
@@ -57,8 +55,8 @@ namespace SparrowSharp.Samples.Desktop
             // init compute shader
             int ray_shader = GL.CreateShader(ShaderType.ComputeShader);            
 #else
-            GLTexture bg = SimpleTextureLoader.LoadAndroidResource(SparrowGame.Droid.Resource.Drawable.testbg);
-            GLTexture transp = SimpleTextureLoader.LoadAndroidResource(SparrowGame.Droid.Resource.Drawable.testbg_transparency);
+            GLTexture bg = SimpleTextureLoader.LoadAndroidResource(SparrowGame.Resource.Drawable.testbg);
+            GLTexture transp = SimpleTextureLoader.LoadAndroidResource(SparrowGame.Resource.Drawable.testbg_transparency);
             GLES31.GlBindImageTexture(0, (int)tex_output, 0, false, 0, GLES31.GlWriteOnly, GLES30.GlRgba8);
             GLES31.GlBindImageTexture(1, (int)bg.Name, 0, false, 0, GLES31.GlReadOnly, GLES30.GlRgba8);
             GLES31.GlBindImageTexture(2, (int)transp.Name, 0, false, 0, GLES31.GlReadOnly, GLES30.GlRgba8);
@@ -66,70 +64,20 @@ namespace SparrowSharp.Samples.Desktop
             int ray_shader = GLES31.GlCreateShader(GLES31.GlComputeShader);
 #endif
 
-            //string shaderStr = LoadString("SparrowGame.lightComputeShader.glsl");
-            string shaderStr = @"#version 430
-            
-uniform vec2 lightPos; // passed from the app
-            
-layout (local_size_x = 512, local_size_y = 1) in; // should be a multiple of 32 on Nvidia, 64 on AMD; >256 might not work
-layout (rgba8, binding = 0) uniform image2D img_output;
-layout (rgba8, binding = 1) uniform readonly image2D colorTex; // determines color
-layout (rgba8, binding = 2) uniform readonly image2D transpTex; // determines transparency
+            string shaderStr = ResourceLoader.GetEmbeddedResourceString("lightComputeShader.glsl");
+#if __WINDOWS__
+            shaderStr = 
+                @"#version 430
+                #define highp
+                #define mediump
+                #define lowp
+                " + shaderStr;
+#else
+            shaderStr =
+                @"#version 310 es
+                " + shaderStr;
+#endif
 
-void main () {
-    uint global_coords = gl_WorkGroupID.x; // postion in global work group; 0 = left, 1 = right, 2 = top, 3 = bottom
-    uint local_coords = gl_LocalInvocationID.x; // get position in local work group
-    uint txrsiz = 512; 
-    // determine coordinates where rendering ends
-    uvec2 endPoint = uvec2(0, 0);
-    if (global_coords < 2) {// on the left or right
-    endPoint.y = local_coords;
-        if (global_coords == 1) { // right
-            endPoint.x = txrsiz;
-        }
-    }
-    else {// on the top or bottom
-        endPoint.x = local_coords;
-        if (global_coords == 3) {
-            endPoint.y = txrsiz;
-        }
-    }
-    // calculate light to the endpoint
-    uint i;
-    vec2 t;
-    vec2 dt;
-    vec4 outPixel;
-    vec4 transpPixel;
-    vec4 colorPixel;
-    ivec2 coords;
-    float transmit = 0;// light transmission constant coeficient <0,1>
-    float currentAlpha = 1.0;
-    dt = normalize(endPoint - lightPos);
-    outPixel = vec4(1.0, 1.0, 1.0, 1.0);  
-    t = lightPos;
-    if (dot(endPoint-t, dt) > 0.0) {
-		for (i = 0; i < txrsiz; i++) {
-            coords.x = int(t.x);
-            coords.y = int(t.y);
-
-			// calculate transparency
-			transpPixel = imageLoad(transpTex, coords);   
-            currentAlpha = (transpPixel.b + transpPixel.g * 10.0 + transpPixel.r * 100.0) / 111.0;
-			
-			// calculate color
-			colorPixel = imageLoad(colorTex, coords);
-            //outPixel.rgb = colorPixel.rgb;
-            outPixel.rgb = min(colorPixel.rgb, outPixel.rgb);
-            outPixel.rgb = outPixel.rgb - (1.0 - currentAlpha) - transmit; 
-
-			imageStore(img_output, coords, outPixel);
-
-			if (dot(endPoint - t, dt) <= 0.000f) break;
-			//if (outPixel.r + outPixel.g + outPixel.b <= 0.001f) break;
-			t += dt;
-		}
-    }
-}";
             GL.ShaderSource(ray_shader, 1, new string[] { shaderStr }, (int[])null);
             GL.CompileShader(ray_shader);
             GPUInfo.checkShaderCompileError(ray_shader);
@@ -139,22 +87,6 @@ void main () {
             GPUInfo.checkShaderLinkError(ray_program);
             
             base.InitImage(tt);
-        }
-
-        public string LoadString(string filename)
-        {
-            var assembly = Assembly.GetExecutingAssembly();
-            Stream stream = assembly.GetManifestResourceStream(filename);
-            try
-            {
-                StreamReader reader = new StreamReader(stream);
-                return reader.ReadToEnd();
-            }
-            catch (ArgumentNullException ex)
-            {
-                Console.Out.WriteLine("unable to load file "  + filename + " " + ex);
-                return "";
-            }
         }
 
         public override void Render(RenderSupport support)

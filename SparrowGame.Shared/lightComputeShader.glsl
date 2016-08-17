@@ -1,4 +1,4 @@
-﻿#version 430
+﻿// version is added based on platform
             
 uniform vec2 lightPos; // passed from the app
             
@@ -8,38 +8,38 @@ layout (rgba8, binding = 1) uniform readonly image2D colorTex; // determines col
 layout (rgba8, binding = 2) uniform readonly image2D transpTex; // determines transparency
 
 void main () {
-    uint global_coords = gl_WorkGroupID.x; // postion in global work group; 0 = left, 1 = right, 2 = top, 3 = bottom
-    uint local_coords = gl_LocalInvocationID.x; // get position in local work group
-    uint txrsiz = 512; 
+    float global_coords = float(gl_WorkGroupID.x); // postion in global work group; 0 = left, 1 = right, 2 = top, 3 = bottom
+    float local_coords = float(gl_LocalInvocationID.x); // get position in local work group
+    float txrsiz = 512.0f; 
     // determine coordinates where rendering ends
-    uvec2 endPoint = uvec2(0, 0);
-    if (global_coords < 2) {// on the left or right
+    vec2 endPoint = vec2(0.0f, 0.0f);
+    if (global_coords < 2.0f) {// on the left or right
     endPoint.y = local_coords;
-        if (global_coords == 1) { // right
+        if (global_coords == 1.0f) { // right
             endPoint.x = txrsiz;
         }
     }
     else {// on the top or bottom
         endPoint.x = local_coords;
-        if (global_coords == 3) {
+        if (global_coords == 3.0f) {
             endPoint.y = txrsiz;
         }
     }
     // calculate light to the endpoint
-    uint i;
+    float i;
     vec2 t;
     vec2 dt;
-    vec4 outPixel;
+    vec4 outPixel; // TODO must be uvec or ivec on Android?
     vec4 transpPixel;
     vec4 colorPixel;
     ivec2 coords;
-    float transmit = 0;// light transmission constant coeficient <0,1>
-    float currentAlpha = 1.0;
+    float transmit = 0.0f;// light transmission constant coeficient <0,1>
+    float currentAlpha = 1.0f;
     dt = normalize(endPoint - lightPos);
     outPixel = vec4(1.0, 1.0, 1.0, 1.0);  
     t = lightPos;
-    if (dot(endPoint-t, dt) > 0.0) {
-		for (i = 0; i < txrsiz; i++) {
+    if (dot(endPoint - t, dt) > 0.0f) {
+		for (i = 0.0f; i < txrsiz; i++) {
             coords.x = int(t.x);
             coords.y = int(t.y);
 
@@ -52,8 +52,10 @@ void main () {
             //outPixel.rgb = colorPixel.rgb;
             outPixel.rgb = min(colorPixel.rgb, outPixel.rgb);
             outPixel.rgb = outPixel.rgb - (1.0 - currentAlpha) - transmit; 
-
+			
+			//uvec4 iOut = uvec4(uint(outPixel.r * 256.0), uint(outPixel.g * 256.0), uint(outPixel.b * 256.0), uint(outPixel.a * 256.0));
 			imageStore(img_output, coords, outPixel);
+			//imageStore(img_output, ivec2(3, 6), vec4(0,0,0,0));
 
 			if (dot(endPoint - t, dt) <= 0.000f) break;
 			//if (outPixel.r + outPixel.g + outPixel.b <= 0.001f) break;

@@ -9,7 +9,7 @@ using Android.Content.PM;
 using Sparrow.Core;
 using Sparrow.Samples;
 
-namespace SparrowGame.Droid
+namespace SparrowGame
 {
     [Activity(Label = "sparrow-sharp benchmark", Name = "awesome.demo.activity",
 #if __ANDROID_11__

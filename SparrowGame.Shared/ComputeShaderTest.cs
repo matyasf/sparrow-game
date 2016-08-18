@@ -4,9 +4,7 @@ using Sparrow.Core;
 using Sparrow.Geom;
 using Sparrow.ResourceLoading;
 using Sparrow.Textures;
-using SparrowSharp.Utils;
 using SparrowGame;
-using Sparrow;
 using SparrowGame.Shared;
 using Sparrow.Touches;
 
@@ -14,7 +12,6 @@ using Sparrow.Touches;
 using OpenTK.Graphics.OpenGL4;
 #elif __ANDROID__
 using OpenTK.Graphics.ES30;
-using Android.Opengl;
 #endif
 
 namespace SparrowSharp.Samples.Desktop
@@ -26,15 +23,13 @@ namespace SparrowSharp.Samples.Desktop
         int tex_w = 512, tex_h = 512;
         int tex_output;
         float locX, locY;
-
-        public event Juggler.RemoveFromJugglerHandler RemoveFromJugglerEvent;
-
+        
         public ComputeShaderTest()
         {
             OpenGLDebugCallback.Init();
             GPUInfo.PrintGPUInfo();
 
-             TextureProperties texProps = new TextureProperties
+            TextureProperties texProps = new TextureProperties
                 {
                     TextureFormat = TextureFormat.Rgba8888,
                     Scale = 1.0f,
@@ -46,33 +41,29 @@ namespace SparrowSharp.Samples.Desktop
             GLTexture tt = new GLTexture(IntPtr.Zero, texProps);
             tex_output = (int)tt.Name;
 
-#if __WINDOWS__
             GLTexture bg = SimpleTextureLoader.LoadImageFromStream(ResourceLoader.GetEmbeddedResourceStream("testbg.png"));
             GLTexture transp = SimpleTextureLoader.LoadImageFromStream(ResourceLoader.GetEmbeddedResourceStream("testbg_transparency.png"));
+#if __WINDOWS__
             GL.BindImageTexture(0, tex_output, 0, false, 0, TextureAccess.WriteOnly, SizedInternalFormat.Rgba8);
             GL.BindImageTexture(1, bg.Name, 0, false, 0, TextureAccess.ReadOnly, SizedInternalFormat.Rgba8);
             GL.BindImageTexture(2, transp.Name, 0, false, 0, TextureAccess.ReadOnly, SizedInternalFormat.Rgba8);
-
-            // init compute shader
-            int ray_shader = GL.CreateShader(ShaderType.ComputeShader);            
+            
+            int computeShader = GL.CreateShader(ShaderType.ComputeShader);        
 #else
-            GLTexture bg = SimpleTextureLoader.LoadAndroidResource(Resource.Drawable.testbg);
-            GLTexture transp = SimpleTextureLoader.LoadAndroidResource(Resource.Drawable.testbg_transparency);
-
             OpenTK.Graphics.ES31.GL.BindImageTexture(0, tex_output, 0, false, 0, OpenTK.Graphics.ES31.All.WriteOnly, OpenTK.Graphics.ES31.All.Rgba8);
             OpenTK.Graphics.ES31.GL.BindImageTexture(1, bg.Name, 0, false, 0, OpenTK.Graphics.ES31.All.ReadOnly, OpenTK.Graphics.ES31.All.Rgba8);
             OpenTK.Graphics.ES31.GL.BindImageTexture(2, transp.Name, 0, false, 0, OpenTK.Graphics.ES31.All.ReadOnly, OpenTK.Graphics.ES31.All.Rgba8);
-            // init compute shader
-            int ray_shader = OpenTK.Graphics.ES31.GL.CreateShader(OpenTK.Graphics.ES31.ShaderType.ComputeShader);
-            RenderSupport.CheckForOpenGLError();
+            
+            int computeShader = OpenTK.Graphics.ES31.GL.CreateShader(OpenTK.Graphics.ES31.ShaderType.ComputeShader);
 #endif
+            RenderSupport.CheckForOpenGLError();
             string shaderStr = ResourceLoader.GetEmbeddedResourceString("lightComputeShader.glsl");
             
-            GL.ShaderSource(ray_shader, 1, new string[] { shaderStr }, (int[])null);
-            GL.CompileShader(ray_shader);
-            GPUInfo.checkShaderCompileError(ray_shader);
+            GL.ShaderSource(computeShader, 1, new string[] { shaderStr }, (int[])null);
+            GL.CompileShader(computeShader);
+            GPUInfo.checkShaderCompileError(computeShader);
             ray_program = GL.CreateProgram();
-            GL.AttachShader(ray_program, ray_shader);
+            GL.AttachShader(ray_program, computeShader);
             GL.LinkProgram(ray_program);
             GPUInfo.checkShaderLinkError(ray_program);
             base.InitImage(tt);
@@ -107,7 +98,7 @@ namespace SparrowSharp.Samples.Desktop
 
         public override Rectangle BoundsInSpace(DisplayObject targetSpace)
         {
-            return new Rectangle(0, 0, 512, 512);
+            return new Rectangle(0, 0, tex_w, tex_h);
         }
     }
 }

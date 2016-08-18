@@ -31,12 +31,15 @@ namespace SparrowGame.Shared
 
         static void PCCallbackHandler(DebugSource source, DebugType type, int id, DebugSeverity severity, int length, IntPtr message, IntPtr userParam)
         {
-            string msg = Marshal.PtrToStringAnsi(message);
-            Console.WriteLine("[GL] {0}; {1}; {2}; {3}; {4}", source, type, id, severity, msg);
+            if (severity == DebugSeverity.DebugSeverityHigh || severity == DebugSeverity.DebugSeverityMedium)
+            {
+                string msg = Marshal.PtrToStringAnsi(message);
+                Console.WriteLine("[GL] {0}; {1}; {2}; {3}; {4}", source, type, id, severity, msg);
+            }
         }
 
 #elif __ANDROID__
-    class OpenGLDebugCallback : GLES31Ext.IDebugProcKHR
+    class OpenGLDebugCallback : Java.Lang.Object, GLES31Ext.IDebugProcKHR
     { 
             
         private static OpenGLDebugCallback instance;
@@ -50,24 +53,19 @@ namespace SparrowGame.Shared
         {
             if (Context.DeviceSupportsOpenGLExtension("GL_KHR_debug"))
             {
-                GLES31Ext.GlDebugMessageCallbackKHR(this);
+                try
+                {
+                    GLES31Ext.GlDebugMessageCallbackKHR(this);
+                }
+                catch (Exception ex)
+                {
+                    Console.Out.WriteLine("WARNING: No support for OpenGL debug callback, likely its not implemented");
+                }
             }
             else
             {
                 Console.Out.WriteLine("WARNING: No support for OpenGL debug callback");
             }
-        }
-
-        public IntPtr Handle
-        {
-            get
-            {
-                return IntPtr.Zero;
-            }
-        }
-
-        public void Dispose()
-        {
         }
 
         public void OnMessage(int source, int type, int id, int severity, string message)

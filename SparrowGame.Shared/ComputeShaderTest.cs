@@ -8,6 +8,7 @@ using SparrowSharp.Utils;
 using SparrowGame;
 using Sparrow;
 using SparrowGame.Shared;
+using Sparrow.Touches;
 
 #if __WINDOWS__
 using OpenTK.Graphics.OpenGL4;
@@ -24,6 +25,7 @@ namespace SparrowSharp.Samples.Desktop
         int ray_program;
         int tex_w = 512, tex_h = 512;
         int tex_output;
+        float locX, locY;
 
         public event Juggler.RemoveFromJugglerHandler RemoveFromJugglerEvent;
 
@@ -74,33 +76,32 @@ namespace SparrowSharp.Samples.Desktop
             GL.LinkProgram(ray_program);
             GPUInfo.checkShaderLinkError(ray_program);
             base.InitImage(tt);
+
+            Touch += onTouch;
+        }
+
+        private void onTouch(TouchEvent touch)
+        {
+            if (touch.Touches.Count > 0)
+            {
+                locX = touch.Touches[0].GlobalX;
+                locY = touch.Touches[0].GlobalY;
+            }
         }
 
         public override void Render(RenderSupport support)
         {
             GL.UseProgram(ray_program);
-            float locX, locY;
             int testVarLocation = GL.GetUniformLocation(ray_program, "lightPos");
-
-#if __WINDOWS__
-            DesktopViewController dvc = (DesktopViewController)SparrowSharpApp.NativeWindow;
-            var mouse = dvc.Mouse;
-            locX = mouse.X;
-            locY = mouse.Y;
-            // Set the uniform
             GL.Uniform2(testVarLocation, locX, locY);
+#if __WINDOWS__
             GL.DispatchCompute(4, 1, 1);
-            // make sure writing to image has finished before read. Put this as close to the etx sampler code as possible
+            // make sure writing to image has finished before read. Put this as close to the tex sampler code as possible
             GL.MemoryBarrier(MemoryBarrierFlags.ShaderImageAccessBarrierBit);
-
-            //GL.DebugMessageInsert(DebugSourceExternal.DebugSourceApplication, DebugType.DebugTypeError, 3, DebugSeverity.DebugSeverityHigh, 4, "1234");
 #else
-            Random rnd = new Random();
-            GL.Uniform2(testVarLocation, (float)rnd.Next(0, 500), (float)rnd.Next(0, 500));
             OpenTK.Graphics.ES31.GL.DispatchCompute(4, 1, 1); // max 65535 for each dimension
             OpenTK.Graphics.ES31.GL.MemoryBarrier(OpenTK.Graphics.ES31.MemoryBarrierMask.AllBarrierBits);
 #endif
-            
             base.Render(support);
         }
 

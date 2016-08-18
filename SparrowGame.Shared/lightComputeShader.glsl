@@ -2,7 +2,7 @@
             
 uniform highp vec2 lightPos; // passed from the app
             
-layout (local_size_x = 512, local_size_y = 1) in; // should be a multiple of 32 on Nvidia, 64 on AMD; >256 might not work
+layout (local_size_x = 512, local_size_y = 1) in; // should be a multiple of 32 on Nvidia, 64 on AMD; max 128 for each, product of all must be max 128
 layout (rgba8, binding = 0) uniform restrict writeonly highp image2D img_output;
 layout (rgba8, binding = 1) uniform readonly highp image2D colorTex; // determines color
 layout (rgba8, binding = 2) uniform readonly highp image2D transpTex; // determines transparency

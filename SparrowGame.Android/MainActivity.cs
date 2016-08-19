@@ -1,9 +1,5 @@
-﻿using System;
-using Android.App;
-using Android.Content;
-using Android.Runtime;
+﻿using Android.App;
 using Android.Views;
-using Android.Widget;
 using Android.OS;
 using Android.Content.PM;
 using Sparrow.Core;
@@ -11,12 +7,11 @@ using Sparrow.Samples;
 
 namespace SparrowGame
 {
-    [Activity(Label = "sparrow-sharp benchmark", Name = "awesome.demo.activity",
+    [Activity(Label = "sparrow-sharp benchmark", Name = "awesome.demo.activity", ScreenOrientation = ScreenOrientation.Landscape, 
 #if __ANDROID_11__
         HardwareAccelerated = false,
 #endif
-        ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.KeyboardHidden,
-         MainLauncher = true)]
+        ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.KeyboardHidden, MainLauncher = true)]
     public class MainActivity : Activity
     {
         private static AndroidViewController sparrowView;
@@ -29,7 +24,7 @@ namespace SparrowGame
 
             if (sparrowView == null)
             {
-                sparrowView = new AndroidViewController(BaseContext, typeof(Benchmark));
+                sparrowView = new AndroidViewController(BaseContext, typeof(GameMain));
             }
             if (sparrowView.Parent != this)
             {

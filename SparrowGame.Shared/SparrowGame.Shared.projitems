@@ -9,7 +9,11 @@
     <Import_RootNamespace>SparrowGame.Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)benchmark_object.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)bigstar.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)lightComputeShader.glsl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)testbg.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)testbg_transparency.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Benchmark.cs" />
@@ -17,11 +21,5 @@
     <Compile Include="$(MSBuildThisFileDirectory)GPUInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)OpenGLDebugCallback.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ResourceLoader.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)benchmark_object.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)bigstar.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)testbg.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)testbg_transparency.png" />
   </ItemGroup>
 </Project>

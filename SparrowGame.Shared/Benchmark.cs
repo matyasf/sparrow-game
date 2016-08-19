@@ -9,7 +9,7 @@ using SparrowGame.Shared;
 
 namespace Sparrow.Samples
 {
-    public class Benchmark : Sprite
+    public class GameMain : Sprite
     {
         private Sprite _container;
         private int _frameCount = 0;
@@ -18,41 +18,38 @@ namespace Sparrow.Samples
         private int _failCount = 0;
         private int _waitFrames = 0;
         private Texture[] textures;
+        private ComputeShaderTest test;
 
-        public Benchmark()
+        public GameMain()
         {
+            SparrowSharpApp.Stage.Height = 640;
+            SparrowSharpApp.Stage.Width = 640 * SparrowSharpApp.Stage.DrawableWidth / SparrowSharpApp.Stage.DrawableHeight;
 
-#if __WINDOWS__
-            GLTexture star = SimpleTextureLoader.LoadImageFromStream( ResourceLoader.GetEmbeddedResourceStream("bigstar.png") );
-            GLTexture bird = SimpleTextureLoader.LoadImageFromStream( ResourceLoader.GetEmbeddedResourceStream("benchmark_object.png") );
-#else
-            GLTexture star = SimpleTextureLoader.LoadAndroidResource(SparrowGame.Resource.Drawable.bigstar);
-            GLTexture bird = SimpleTextureLoader.LoadAndroidResource(SparrowGame.Resource.Drawable.benchmark_object);
-#endif
+            AddedToStage += AddedToStageHandler;
+        }
+
+        private void AddedToStageHandler(DisplayObject target, DisplayObject currentTarget)
+        {
+            test = new ComputeShaderTest();
+            AddChild(test);
+
+            GLTexture star = SimpleTextureLoader.LoadImageFromStream(ResourceLoader.GetEmbeddedResourceStream("bigstar.png"));
+            GLTexture bird = SimpleTextureLoader.LoadImageFromStream(ResourceLoader.GetEmbeddedResourceStream("benchmark_object.png"));
 
             textures = new Texture[] { bird, star };
 
             // the container will hold all test objects
             _container = new Sprite();
 
-            EnterFrame += EnterFrameHandler;
-            AddedToStage += AddedToStageHandler;
-        }
-
-        ComputeShaderTest test;
-
-        private void AddedToStageHandler(DisplayObject target, DisplayObject currentTarget)
-        {
             _started = true;
             _waitFrames = 3;
            
             SparrowSharpApp.ShowStats = true;
 
-            test = new ComputeShaderTest();
-            AddChild(test);
-
             AddChild(_container);
-            AddTestObjects(3);
+            AddTestObjects(9);
+
+            EnterFrame += EnterFrameHandler;
         }
 
         private void AddTestObjects(int numObjects)
@@ -113,7 +110,13 @@ namespace Sparrow.Samples
         {
             if (!_started)
                 return;
-            
+
+            for (int i = 0; i < _container.NumChildren; i++)
+            {
+                DisplayObject child = _container.GetChild(i);
+                child.Rotation += 0.05f;
+            }
+
             _elapsed += passedTime / 1000;
             ++_frameCount;
         }

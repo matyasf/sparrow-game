@@ -84,10 +84,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-nodpi\benchmark_object.png" />
-    <AndroidResource Include="Resources\drawable-nodpi\bigstar.png" />
-    <AndroidResource Include="Resources\drawable-nodpi\testbg.png" />
-    <AndroidResource Include="Resources\drawable-nodpi\testbg_transparency.png" />
+    <Folder Include="Resources\drawable-nodpi\" />
   </ItemGroup>
   <Import Project="..\SparrowGame.Shared\SparrowGame.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

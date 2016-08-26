@@ -28,7 +28,7 @@ namespace SparrowSharp.Samples.Desktop
         {
             OpenGLDebugCallback.Init();
             GPUInfo.PrintGPUInfo();
-
+            
             TextureProperties texProps = new TextureProperties
                 {
                     TextureFormat = TextureFormat.Rgba8888,
@@ -48,7 +48,7 @@ namespace SparrowSharp.Samples.Desktop
             GL.BindImageTexture(1, bg.Name, 0, false, 0, TextureAccess.ReadOnly, SizedInternalFormat.Rgba8);
             GL.BindImageTexture(2, transp.Name, 0, false, 0, TextureAccess.ReadOnly, SizedInternalFormat.Rgba8);
             
-            int computeShader = GL.CreateShader(ShaderType.ComputeShader);        
+            int computeShader = GL.CreateShader(ShaderType.ComputeShader);
 #else
             OpenTK.Graphics.ES31.GL.BindImageTexture(0, tex_output, 0, false, 0, OpenTK.Graphics.ES31.All.WriteOnly, OpenTK.Graphics.ES31.All.Rgba8);
             OpenTK.Graphics.ES31.GL.BindImageTexture(1, bg.Name, 0, false, 0, OpenTK.Graphics.ES31.All.ReadOnly, OpenTK.Graphics.ES31.All.Rgba8);
@@ -83,14 +83,17 @@ namespace SparrowSharp.Samples.Desktop
         public override void Render(RenderSupport support)
         {
             GL.UseProgram(ray_program);
-            int testVarLocation = GL.GetUniformLocation(ray_program, "lightPos");
-            GL.Uniform2(testVarLocation, locX, locY);
+            int lightPos = GL.GetUniformLocation(ray_program, "lightPos");
+            GL.Uniform2(lightPos, locX, locY);
+
+            int lightColor = GL.GetUniformLocation(ray_program, "lightColor");
+            GL.Uniform4(lightColor, 1f, 1f, 1f, 1f);
 #if __WINDOWS__
-            GL.DispatchCompute(4, 1, 1);
+            GL.DispatchCompute(4, 4, 1);
             // make sure writing to image has finished before read. Put this as close to the tex sampler code as possible
             GL.MemoryBarrier(MemoryBarrierFlags.ShaderImageAccessBarrierBit);
 #else
-            OpenTK.Graphics.ES31.GL.DispatchCompute(4, 1, 1); // max 65535 for each dimension
+            OpenTK.Graphics.ES31.GL.DispatchCompute(4, 4, 1); // max 65535 for each dimension
             OpenTK.Graphics.ES31.GL.MemoryBarrier(OpenTK.Graphics.ES31.MemoryBarrierMask.AllBarrierBits);
 #endif
             base.Render(support);

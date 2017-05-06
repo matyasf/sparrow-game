@@ -16,10 +16,7 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)testbg_transparency.png" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Benchmark.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameMain.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ComputeShaderTest.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)GPUInfo.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)OpenGLDebugCallback.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ResourceLoader.cs" />
   </ItemGroup>
 </Project>

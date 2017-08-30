@@ -1,0 +1,1360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="43ede7a6-3681-4dbd-bc34-18b50d021014" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.sparrow-game/.idea/contentModel.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.sparrow-game/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.sparrow-game/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.sparrow-game/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.sparrow-game/riderModule.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SparrowGame.Android/SparrowGame.Droid.csproj" afterPath="$PROJECT_DIR$/SparrowGame.Android/SparrowGame.Droid.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SparrowGame.Android/SparrowGame.Droid.csproj.bak" afterPath="$PROJECT_DIR$/SparrowGame.Android/SparrowGame.Droid.csproj.bak" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SparrowGame.Shared/ComputeShaderTest.cs" afterPath="$PROJECT_DIR$/SparrowGame.Shared/ComputeShaderTest.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SparrowGame.Shared/GameMain.cs" afterPath="$PROJECT_DIR$/SparrowGame.Shared/GameMain.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SparrowGame.Shared/lightComputeShader.glsl" afterPath="$PROJECT_DIR$/SparrowGame.Shared/lightComputeShader.glsl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SparrowGame/SparrowGame.Desktop.csproj" afterPath="$PROJECT_DIR$/SparrowGame/SparrowGame.Desktop.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SparrowGame/packages.config" afterPath="$PROJECT_DIR$/SparrowGame/packages.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sparrow-game.sln" afterPath="$PROJECT_DIR$/sparrow-game.sln" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="sparrow-game" />
+  </component>
+  <component name="FileEditorManager">
+    <splitter split-orientation="horizontal" split-proportion="0.44360903">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+          <file leaf-file-name="ComputeShaderTest.cs" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/ComputeShaderTest.cs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="627">
+                  <caret line="97" column="18" lean-forward="true" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
+                  <folding>
+                    <marker date="1504136533412" expanded="true" signature="7:253" ph="..." />
+                    <marker date="1504136533412" expanded="true" signature="283:4418" ph="{...}" />
+                    <marker date="1504136533412" expanded="true" signature="327:4416" ph="{...}" />
+                    <marker date="1504136533412" expanded="true" signature="574:2728" ph="{...}" />
+                    <marker date="1504136533412" expanded="true" signature="2808:2964" ph="{...}" />
+                    <marker date="1504136533412" expanded="true" signature="3090:3331" ph="{...}" />
+                    <marker date="1504136533412" expanded="true" signature="3141:3269" ph="{...}" />
+                    <marker date="1504136533412" expanded="true" signature="3385:4256" ph="{...}" />
+                    <marker date="1504136533412" expanded="true" signature="4266:4410" ph="/* public override Rectangle BoundsInSpace(DisplayObject targetSpace) ... */" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DesktopViewController.cs" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowSharp.Desktop/Core/DesktopViewController.cs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="309">
+                  <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+                  <folding>
+                    <marker date="1503523592091" expanded="false" signature="6:147" ph="..." />
+                    <marker date="1503523592091" expanded="true" signature="171:5032" ph="{...}" />
+                    <marker date="1503523592091" expanded="true" signature="219:5030" ph="{...}" />
+                    <marker date="1503523592091" expanded="true" signature="719:1173" ph="{...}" />
+                    <marker date="1503523592091" expanded="true" signature="971:1163" ph="{...}" />
+                    <marker date="1503523592091" expanded="true" signature="1203:1521" ph="{...}" />
+                    <marker date="1503523592091" expanded="true" signature="1307:1381" ph="{...}" />
+                    <marker date="1503523592091" expanded="true" signature="1428:1511" ph="{...}" />
+                    <marker date="1503523592091" expanded="true" signature="1639:2484" ph="{...}" />
+                    <marker date="1503523592091" expanded="true" signature="2560:2880" ph="{...}" />
+                    <marker date="1503523592091" expanded="true" signature="2957:3054" ph="{...}" />
+                    <marker date="1503523592091" expanded="true" signature="3122:3642" ph="{...}" />
+                    <marker date="1503523592091" expanded="true" signature="3208:3632" ph="{...}" />
+                    <marker date="1503523592091" expanded="true" signature="3337:3415" ph="{...}" />
+                    <marker date="1503523592091" expanded="true" signature="3520:3618" ph="{...}" />
+                    <marker date="1503523592091" expanded="true" signature="3701:3798" ph="{...}" />
+                    <marker date="1503523592091" expanded="true" signature="3897:4059" ph="{...}" />
+                    <marker date="1503523592091" expanded="true" signature="3954:4049" ph="{...}" />
+                    <marker date="1503523592091" expanded="true" signature="4126:4399" ph="{...}" />
+                    <marker date="1503523592091" expanded="true" signature="4183:4278" ph="{...}" />
+                    <marker date="1503523592091" expanded="true" signature="4295:4389" ph="{...}" />
+                    <marker date="1503523592091" expanded="true" signature="4470:4541" ph="{...}" />
+                    <marker date="1503523592091" expanded="true" signature="4598:5024" ph="{...}" />
+                    <marker date="1503523592091" expanded="true" signature="4636:5001" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="OpenGLDebugCallback.cs" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Rendering/OpenGLDebugCallback.cs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="540">
+                  <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+                  <folding>
+                    <marker date="1503523591810" expanded="false" signature="6:65" ph="..." />
+                    <marker date="1503523591810" expanded="true" signature="89:1683" ph="{...}" />
+                    <marker date="1503523591810" expanded="true" signature="126:1680" ph="{...}" />
+                    <marker date="1503523591810" expanded="true" signature="355:493" ph="{...}" />
+                    <marker date="1503523591810" expanded="true" signature="400:483" ph="{...}" />
+                    <marker date="1503523591810" expanded="true" signature="532:1031" ph="{...}" />
+                    <marker date="1503523591810" expanded="true" signature="558:728" ph="{...}" />
+                    <marker date="1503523591810" expanded="true" signature="761:1021" ph="{...}" />
+                    <marker date="1503523591810" expanded="true" signature="1194:1674" ph="{...}" />
+                    <marker date="1503523591810" expanded="true" signature="1353:1481" ph="{...}" />
+                    <marker date="1503523591810" expanded="true" signature="1536:1664" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="lightComputeShader.glsl" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/lightComputeShader.glsl">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="266">
+                  <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="14" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>lightColor</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/SparrowGame.Shared/GameMain.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Display/Mesh.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Display/Button.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Display/Quad.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Display/DisplayObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Display/Stage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Display/Image.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Rendering/OpenGLDebugCallback.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Touches/TouchProcessor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Touches/TouchEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Touches/Touch.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Touches/TouchPhase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/424808B4-44B1-450F-9BCD-380C84F9DA9D/c3/224bc0af/Vector4.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/424808B4-44B1-450F-9BCD-380C84F9DA9D/29/876cb535/__DynamicallyInvokableAttribute.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/SparrowGame.Android/MainActivity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Core/SparrowSharp.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Rendering/VertexColor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EE9AEB58-D5A6-42B8-B3A9-E2ACF6F2E8FB/08/f347df11/Vertex4f.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Geom/Vector2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Geom/Matrix.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Rendering/Vertex.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Rendering/Effect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EE9AEB58-D5A6-42B8-B3A9-E2ACF6F2E8FB/8b/c2513cdc/Vertex2f.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://C:/Program Files (x86)/NuGet/Config/Microsoft.VisualStudio.Offline.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Rendering/Painter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Rendering/VertexData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Roaming/NuGet/NuGet.Config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2C7DDF90-AE4D-40EC-B31B-9B45E58F2872/65/4bdc25cd/Form.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowSharp.Desktop/Core/DesktopViewController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SparrowGame/MainClass.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EE9AEB58-D5A6-42B8-B3A9-E2ACF6F2E8FB/af/4e70ec0a/BufferTargetARB.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowSharp.Desktop/ResourceLoading/DesktopTextureLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Utils/MouseCursor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/29A3756D-071F-4510-B4AF-11DADA4515AA/f0/49491bae/LayoutKind.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/SparrowGame.Shared/ComputeShaderTest.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Rendering/Painter.cs" />
+        <option value="$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Display/Image.cs" />
+        <option value="$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Display/Mesh.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2C7DDF90-AE4D-40EC-B31B-9B45E58F2872/65/4bdc25cd/Form.cs" />
+        <option value="$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Utils/MouseCursor.cs" />
+        <option value="$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Core/SparrowSharp.cs" />
+        <option value="$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Display/DisplayObject.cs" />
+        <option value="$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Touches/Touch.cs" />
+        <option value="$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Touches/TouchPhase.cs" />
+        <option value="$PROJECT_DIR$/../sparrow-sharp/SparrowSharp.Desktop/Core/DesktopViewController.cs" />
+        <option value="$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Touches/TouchEvent.cs" />
+        <option value="$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Touches/TouchProcessor.cs" />
+        <option value="$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Display/Button.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EE9AEB58-D5A6-42B8-B3A9-E2ACF6F2E8FB/af/4e70ec0a/BufferTargetARB.cs" />
+        <option value="$PROJECT_DIR$/SparrowGame.Shared/GameMain.cs" />
+        <option value="$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Geom/Matrix.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/29A3756D-071F-4510-B4AF-11DADA4515AA/f0/49491bae/LayoutKind.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EE9AEB58-D5A6-42B8-B3A9-E2ACF6F2E8FB/8e/78578a3a/Gl.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/424808B4-44B1-450F-9BCD-380C84F9DA9D/c3/224bc0af/Vector4.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/424808B4-44B1-450F-9BCD-380C84F9DA9D/29/876cb535/__DynamicallyInvokableAttribute.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EE9AEB58-D5A6-42B8-B3A9-E2ACF6F2E8FB/08/f347df11/Vertex4f.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EE9AEB58-D5A6-42B8-B3A9-E2ACF6F2E8FB/8b/c2513cdc/Vertex2f.cs" />
+        <option value="$PROJECT_DIR$/SparrowGame.Shared/lightComputeShader.glsl" />
+        <option value="$PROJECT_DIR$/SparrowGame.Shared/ComputeShaderTest.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1060" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sparrow-game (5 projects)" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sparrow-game (5 projects)" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SparrowShared" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sparrow-game (5 projects)" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SparrowShared" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Rendering" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="RiderNuGetCacheManager.AutoClear.http-cache" value="2" />
+    <property name="RiderNuGetCacheManager.AutoClear.packages-cache" value="2" />
+    <property name="RiderNuGetCacheManager.AutoClear.global-packages" value="2" />
+    <property name="RiderNuGetCacheManager.AutoClear.temp" value="1" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected=".NET Project.Default">
+    <configuration default="true" type="DotNetProject" factoryName=".NET Project">
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_KIND" value="None" />
+      <option name="PROJECT_TFM" value="" />
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="USE_MONO" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="XamarinAndroidProject" factoryName="Xamarin.Android">
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="DEPLOY_BEHAVIOUR_NAME" value="Default" />
+      <option name="DEPLOY_TARGET_BEHAVIOUR_NAME" value="Ask" />
+      <option name="DEFAULT_DEVICE_TO_RUN" value="" />
+      <option name="DEFAULT_EMULATOR_TO_RUN" value="" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Android Default" type="XamarinAndroidProject" factoryName="Xamarin.Android">
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="DEPLOY_BEHAVIOUR_NAME" value="Default" />
+      <option name="DEPLOY_TARGET_BEHAVIOUR_NAME" value="Ask" />
+      <option name="DEFAULT_DEVICE_TO_RUN" value="" />
+      <option name="DEFAULT_EMULATOR_TO_RUN" value="" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/sparrowGame/SparrowGame.Desktop.csproj" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value=".NETFramework,Version=v4.6.1" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/sparrowGame/bin/Debug/SparrowGame.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="USE_MONO" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Xamarin.Android.Android Default" />
+      <item index="1" class="java.lang.String" itemvalue=".NET Project.Default" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33696347" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32849163" sideWeight="0.5021482" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32849163" sideWeight="0.49785176" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.521978" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48826817" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16863587" sideWeight="0.49417636" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42681563" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22986037" sideWeight="0.5058236" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Rendering/OpenGLDebugCallback.cs</url>
+          <line>31</line>
+          <properties startOffset="901" endOffset="1007" documentPath="$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Rendering/OpenGLDebugCallback.cs" />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Rendering/OpenGLDebugCallback.cs</url>
+          <line>40</line>
+          <properties startOffset="1384" endOffset="1467" documentPath="$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Rendering/OpenGLDebugCallback.cs" />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Rendering/OpenGLDebugCallback.cs</url>
+          <line>44</line>
+          <properties startOffset="1567" endOffset="1650" documentPath="$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Rendering/OpenGLDebugCallback.cs" />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="37" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/ComputeShaderTest.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="58" column="40" lean-forward="false" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
+          <folding>
+            <marker date="1504136533412" expanded="true" signature="7:253" ph="..." />
+            <marker date="1504136533412" expanded="true" signature="283:4418" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="327:4416" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="574:2728" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="2808:2964" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="3090:3331" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="3141:3269" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="3385:4256" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="4266:4410" ph="/* public override Rectangle BoundsInSpace(DisplayObject targetSpace) ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Touches/TouchProcessor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowSharp.Desktop/Core/DesktopViewController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2413">
+          <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparrowGame/MainClass.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="15" column="78" lean-forward="false" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/GameMain.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/ComputeShaderTest.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="66" column="33" lean-forward="true" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
+          <folding>
+            <marker date="1504136533412" expanded="true" signature="7:253" ph="..." />
+            <marker date="1504136533412" expanded="true" signature="283:4418" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="327:4416" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="574:2728" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="2808:2964" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="3090:3331" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="3141:3269" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="3385:4256" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="4266:4410" ph="/* public override Rectangle BoundsInSpace(DisplayObject targetSpace) ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/ComputeShaderTest.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1504136533412" expanded="true" signature="7:253" ph="..." />
+            <marker date="1504136533412" expanded="true" signature="283:4418" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="327:4416" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="574:2728" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="2808:2964" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="3090:3331" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="3141:3269" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="3385:4256" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="4266:4410" ph="/* public override Rectangle BoundsInSpace(DisplayObject targetSpace) ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/GameMain.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/ComputeShaderTest.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1159">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding>
+            <marker date="1504136533412" expanded="true" signature="7:253" ph="..." />
+            <marker date="1504136533412" expanded="true" signature="283:4418" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="327:4416" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="574:2728" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="2808:2964" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="3090:3331" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="3141:3269" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="3385:4256" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="4266:4410" ph="/* public override Rectangle BoundsInSpace(DisplayObject targetSpace) ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/lightComputeShader.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="893">
+          <caret line="47" column="39" lean-forward="false" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/GameMain.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/ComputeShaderTest.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="71" column="19" lean-forward="false" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
+          <folding>
+            <marker date="1504136533412" expanded="true" signature="7:253" ph="..." />
+            <marker date="1504136533412" expanded="true" signature="283:4418" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="327:4416" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="574:2728" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="2808:2964" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="3090:3331" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="3141:3269" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="3385:4256" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="4266:4410" ph="/* public override Rectangle BoundsInSpace(DisplayObject targetSpace) ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparrowGame.Android/MainActivity.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowSharp.Desktop/ResourceLoading/DesktopTextureLoader.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="51" column="27" lean-forward="false" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/testbg_transparency.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/testbg.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files (x86)/NuGet/Config/Microsoft.VisualStudio.Offline.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/NuGet/NuGet.Config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Display/Image.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7745">
+          <caret line="34" column="39" lean-forward="false" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Display/Mesh.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2686">
+          <caret line="261" column="11" lean-forward="false" selection-start-line="261" selection-start-column="11" selection-end-line="261" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2C7DDF90-AE4D-40EC-B31B-9B45E58F2872/65/4bdc25cd/Form.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="32" column="15" lean-forward="false" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Utils/MouseCursor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Display/DisplayObject.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="705" column="12" lean-forward="false" selection-start-line="705" selection-start-column="12" selection-end-line="705" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Touches/TouchPhase.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Display/Stage.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="67" column="38" lean-forward="false" selection-start-line="67" selection-start-column="38" selection-end-line="67" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Touches/Touch.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1634">
+          <caret line="32" column="46" lean-forward="false" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Touches/TouchEvent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1389">
+          <caret line="135" column="27" lean-forward="false" selection-start-line="135" selection-start-column="27" selection-end-line="135" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Display/Button.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2565">
+          <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Touches/TouchProcessor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="63" column="8" lean-forward="true" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Display/Quad.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="179" column="32" lean-forward="false" selection-start-line="179" selection-start-column="32" selection-end-line="179" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EE9AEB58-D5A6-42B8-B3A9-E2ACF6F2E8FB/af/4e70ec0a/BufferTargetARB.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="174" lean-forward="false" selection-start-line="21" selection-start-column="174" selection-end-line="21" selection-end-column="174" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Rendering/Painter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="566" column="23" lean-forward="false" selection-start-line="566" selection-start-column="23" selection-end-line="566" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Geom/Matrix.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2641">
+          <caret line="141" column="13" lean-forward="false" selection-start-line="141" selection-start-column="13" selection-end-line="141" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/29A3756D-071F-4510-B4AF-11DADA4515AA/f0/49491bae/LayoutKind.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="29" lean-forward="false" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Rendering/Effect.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6517">
+          <caret line="349" column="29" lean-forward="false" selection-start-line="349" selection-start-column="29" selection-end-line="349" selection-end-column="29" />
+          <folding>
+            <marker date="1503523592241" expanded="false" signature="7:142" ph="..." />
+            <marker date="1503523592241" expanded="true" signature="171:17628" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="178:4097" ph="/* An effect encapsulates all steps of a Stage3D draw operation. It configures the ... */" />
+            <marker date="1503523592241" expanded="true" signature="4121:17626" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="4793:4967" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="5051:5160" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="5201:5249" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="5402:6164" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="5468:5914" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="5681:5900" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="5969:6154" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="6174:6665" ph="/* Uploads the given index data to the internal index buffer. If the buffer is too ... */" />
+            <marker date="1503523592241" expanded="true" signature="6722:6809" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="6818:7309" ph="/* Uploads the given index data to the internal index buffer. If the buffer is too ... */" />
+            <marker date="1503523592241" expanded="true" signature="7394:8381" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="7613:8115" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="7679:8003" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="7754:7985" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="8024:8101" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="8154:8371" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="8391:8620" ph="/* Uploads the given vertex data to the internal vertex buffer. If the buffer is too ... */" />
+            <marker date="1503523592241" expanded="true" signature="8680:8769" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="8778:9273" ph="/* Uploads the given vertex data to the internal vertex buffer. If the buffer is too ... */" />
+            <marker date="1503523592241" expanded="true" signature="9361:10079" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="9411:9775" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="9490:9636" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="9657:9740" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="9815:10069" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="10111:10340" ph="/* Draws the triangles described by the index- and vertex-buffers, or a range of them. ... */" />
+            <marker date="1503523592241" expanded="true" signature="10417:10730" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="10740:11146" ph="/* This method is called by &lt;code&gt;render&lt;/code&gt;, directly before ... */" />
+            <marker date="1503523592241" expanded="true" signature="11190:11966" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="11976:12160" ph="/// This method is called by &lt;code&gt;Render&lt;/code&gt;, directly after ... " />
+            <marker date="1503523592241" expanded="true" signature="12203:12406" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="12447:12906" ph="/* Creates the program (a combination of vertex- and fragment-shader) used to render ... */" />
+            <marker date="1503523592241" expanded="true" signature="12956:13851" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="13861:14028" ph="/// Appends OpenGL shader defines, this is needed for shaders to work on both ... " />
+            <marker date="1503523592241" expanded="true" signature="14095:14389" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="14398:14727" ph="/* Override this method if the effect requires a different program depending on the ... */" />
+            <marker date="1503523592241" expanded="true" signature="14809:14915" ph="/* Returns the base name for the program. ... */" />
+            <marker date="1503523592241" expanded="true" signature="14956:15068" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="15078:15435" ph="/* Returns the full name of the program, which is used to register it at the current ... */" />
+            <marker date="1503523592241" expanded="true" signature="15472:16505" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="15498:16495" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="15732:15893" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="15914:16011" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="16097:16184" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="16205:16452" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="16515:16760" ph="/* Returns the current program, either by creating a new one (via ... */" />
+            <marker date="1503523592241" expanded="true" signature="16795:17232" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="16822:17222" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="17033:17176" ph="{...}" />
+            <marker date="1503523592241" expanded="true" signature="17242:17439" ph="/* The function that you provide here will be called after a context loss. ... */" />
+            <marker date="1503523592241" expanded="true" signature="17509:17620" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EE9AEB58-D5A6-42B8-B3A9-E2ACF6F2E8FB/8e/78578a3a/Gl.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="65440" column="6" lean-forward="false" selection-start-line="65440" selection-start-column="6" selection-end-line="65440" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Core/SparrowSharp.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="253" column="30" lean-forward="true" selection-start-line="253" selection-start-column="30" selection-end-line="253" selection-end-column="30" />
+          <folding>
+            <marker date="1503523592262" expanded="false" signature="6:201" ph="..." />
+            <marker date="1503523592262" expanded="true" signature="264:10265" ph="{...}" />
+            <marker date="1503523592262" expanded="true" signature="1242:1992" ph="/// When enabled, Sparrow will skip rendering the stage if it hasn't changed since the ... " />
+            <marker date="1503523592262" expanded="true" signature="2252:2593" ph="/// Start your game. ... " />
+            <marker date="1503523592262" expanded="true" signature="2666:4171" ph="{...}" />
+            <marker date="1503523592262" expanded="true" signature="3027:3122" ph="{...}" />
+            <marker date="1503523592262" expanded="true" signature="3550:3655" ph="{...}" />
+            <marker date="1503523592262" expanded="true" signature="3686:3795" ph="{...}" />
+            <marker date="1503523592262" expanded="true" signature="4206:4559" ph="{...}" />
+            <marker date="1503523592262" expanded="true" signature="4609:5975" ph="{...}" />
+            <marker date="1503523592262" expanded="true" signature="4688:5642" ph="{...}" />
+            <marker date="1503523592262" expanded="true" signature="5694:5851" ph="{...}" />
+            <marker date="1503523592262" expanded="true" signature="5890:5965" ph="{...}" />
+            <marker date="1503523592262" expanded="true" signature="6045:6598" ph="{...}" />
+            <marker date="1503523592262" expanded="true" signature="6068:6236" ph="/* the last set viewport is stored in a variable; that way, people can modify the ... */" />
+            <marker date="1503523592262" expanded="true" signature="6317:6588" ph="{...}" />
+            <marker date="1503523592262" expanded="true" signature="6608:6791" ph="/// The painter, which is used for all rendering. The same instance is passed to all ... " />
+            <marker date="1503523592262" expanded="true" signature="6867:7281" ph="/// Makes sure that the next frame is actually rendered. ... " />
+            <marker date="1503523592262" expanded="true" signature="7328:7387" ph="{...}" />
+            <marker date="1503523592262" expanded="true" signature="7435:7502" ph="{...}" />
+            <marker date="1503523592262" expanded="true" signature="7669:8646" ph="{...}" />
+            <marker date="1503523592262" expanded="true" signature="7820:7949" ph="{...}" />
+            <marker date="1503523592262" expanded="true" signature="8656:8811" ph="/// The viewport into which Sparrow contents will be rendered. This is the size of the window/screen in pixels ... " />
+            <marker date="1503523592262" expanded="true" signature="8852:8957" ph="{...}" />
+            <marker date="1503523592262" expanded="true" signature="8967:9162" ph="/// The ratio between viewPort width and stage width. Useful for choosing a different ... " />
+            <marker date="1503523592262" expanded="true" signature="9209:9292" ph="{...}" />
+            <marker date="1503523592262" expanded="true" signature="9302:9504" ph="/// Indicates if OpenGL render methods will report errors. Activate only when needed, ... " />
+            <marker date="1503523592262" expanded="true" signature="9553:9737" ph="{...}" />
+            <marker date="1503523592262" expanded="true" signature="9610:9727" ph="{...}" />
+            <marker date="1503523592262" expanded="true" signature="9789:9963" ph="{...}" />
+            <marker date="1503523592262" expanded="true" signature="10010:10141" ph="{...}" />
+            <marker date="1503523592262" expanded="true" signature="10188:10259" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/GameMain.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="13" column="34" lean-forward="false" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+          <folding>
+            <marker date="1503447635861" expanded="false" signature="7:67" ph="..." />
+            <marker date="1503447635861" expanded="true" signature="97:668" ph="{...}" />
+            <marker date="1503447635861" expanded="true" signature="134:665" ph="{...}" />
+            <marker date="1503447635861" expanded="true" signature="207:324" ph="{...}" />
+            <marker date="1503447635861" expanded="true" signature="417:658" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparrowGame/MainClass.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+          <folding>
+            <marker date="1502660955021" expanded="false" signature="6:87" ph="..." />
+            <marker date="1502660955021" expanded="true" signature="110:436" ph="{...}" />
+            <marker date="1502660955021" expanded="true" signature="129:434" ph="{...}" />
+            <marker date="1502660955021" expanded="true" signature="174:431" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Rendering/VertexData.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7531">
+          <caret line="617" column="102" lean-forward="false" selection-start-line="617" selection-start-column="102" selection-end-line="617" selection-end-column="102" />
+          <folding>
+            <marker date="1503523592959" expanded="false" signature="6:68" ph="..." />
+            <marker date="1503523592959" expanded="true" signature="97:23106" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="104:3666" ph="/* The VertexData class manages a raw list of vertex information, allowing direct upload ... */" />
+            <marker date="1503523592959" expanded="true" signature="3694:23104" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="3921:4024" ph="/// Initializes a VertexData instance with a certain size. ... " />
+            <marker date="1503523592959" expanded="true" signature="4103:4216" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="4226:4509" ph="/// Indicates the size of the VertexData object. You can resize the object any time; if you ... " />
+            <marker date="1503523592959" expanded="true" signature="4540:6170" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="4607:6160" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="4665:6146" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="4718:5974" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="4787:5413" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="4906:5387" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="5442:5621" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="5672:5952" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="5769:5926" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="5999:6085" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="6180:6279" ph="/// Calculates the bounding rectangle of all vertices. ... " />
+            <marker date="1503523592959" expanded="true" signature="6311:6408" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="6418:6495" ph="/// Returns the raw vertex data. ... " />
+            <marker date="1503523592959" expanded="true" signature="6528:6586" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="6596:6679" ph="/// Returns the raw vertex color data. ... " />
+            <marker date="1503523592959" expanded="true" signature="6721:6783" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="6793:7001" ph="/// Indicates if the rgb values are stored premultiplied with the alpha value. If you change ... " />
+            <marker date="1503523592959" expanded="true" signature="7040:7244" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="7066:7138" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="7154:7234" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="7254:7377" ph="/// Copies a range of vertices of this instance to another vertex data object. ... " />
+            <marker date="1503523592959" expanded="true" signature="7500:8684" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="7588:7675" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="7741:7834" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="8170:8674" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="8311:8660" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="8694:8776" ph="/// Returns the position of a vertex. ... " />
+            <marker date="1503523592959" expanded="true" signature="8817:9110" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="8879:8983" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="9120:9202" ph="/// Updates the position of a vertex. ... " />
+            <marker date="1503523592959" expanded="true" signature="9260:9520" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="9326:9430" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="9530:9612" ph="/// Updates the position of a vertex. ... " />
+            <marker date="1503523592959" expanded="true" signature="9672:9998" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="9711:9815" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="9856:9927" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="10008:10101" ph="/// Returns the texture coordinates of a vertex. ... " />
+            <marker date="1503523592959" expanded="true" signature="10146:10442" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="10208:10312" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="10452:10545" ph="/// Updates the texture coordinates of a vertex. ... " />
+            <marker date="1503523592959" expanded="true" signature="10608:10871" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="10674:10778" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="10881:10974" ph="/// Updates the texture coordinates of a vertex. ... " />
+            <marker date="1503523592959" expanded="true" signature="11038:11281" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="11104:11208" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="11291:11428" ph="/// Updates the color of a vertex. The method always expects non-premultiplied alpha values. ... " />
+            <marker date="1503523592959" expanded="true" signature="11495:11977" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="11561:11665" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="11987:12128" ph="/// Updates the color of all vertexes. The method always expects non-premultiplied alpha values. ... " />
+            <marker date="1503523592959" expanded="true" signature="12182:12324" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="12243:12314" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="12334:12471" ph="/// Updates the color of a vertex. The method always expects non-premultiplied alpha values. ... " />
+            <marker date="1503523592959" expanded="true" signature="12525:12635" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="12645:12786" ph="/// Updates the color of all vertexes. The method always expects non-premultiplied alpha values. ... " />
+            <marker date="1503523592959" expanded="true" signature="12827:12962" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="12888:12952" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="12972:13085" ph="/// Returns the RGB color of a vertex (without premultiplied alpha). ... " />
+            <marker date="1503523592959" expanded="true" signature="13125:13588" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="13187:13291" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="13389:13495" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="13598:13701" ph="/// Writes the given RGB and alpha values to all vertices. ... " />
+            <marker date="1503523592959" expanded="true" signature="13755:13829" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="13839:13952" ph="/// Writes the given RGB and alpha values to the specified vertices. ... " />
+            <marker date="1503523592959" expanded="true" signature="14037:14632" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="14121:14204" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="14554:14622" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="14642:14727" ph="/// Updates the alpha value of a vertex. ... " />
+            <marker date="1503523592959" expanded="true" signature="14782:14891" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="14901:14990" ph="/// Updates the alpha value of all vertices. ... " />
+            <marker date="1503523592959" expanded="true" signature="15032:15167" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="15093:15157" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="15177:15262" ph="/// Returns the alpha value of a vertex. ... " />
+            <marker date="1503523592959" expanded="true" signature="15303:15531" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="15365:15469" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="15541:15640" ph="/// Multiplies all alpha values with a certain factor. ... " />
+            <marker date="1503523592959" expanded="true" signature="15686:15756" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="15766:15872" ph="/// Multiplies a range of alpha values with a certain factor. ... " />
+            <marker date="1503523592959" expanded="true" signature="15946:17023" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="16008:16112" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="16145:16197" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="16340:17013" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="16559:16811" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="16832:16999" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="17033:17176" ph="/// Transforms the positions of subsequent vertices by multiplication with a transformation matrix ... " />
+            <marker date="1503523592959" expanded="true" signature="17261:17765" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="17303:17355" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="17433:17755" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="17775:17910" ph="/// Calculates the bounding rectangle of all vertices after being transformed by a matrix. ... " />
+            <marker date="1503523592959" expanded="true" signature="17978:18069" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="18079:18221" ph="/// Calculates the bounding rectangle of subsequent vertices after being transformed by a matrix. ... " />
+            <marker date="1503523592959" expanded="true" signature="18319:19892" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="18398:18502" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="18815:19386" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="18886:19372" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="19403:19806" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="19474:19792" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="19902:20061" ph="/// Changes the way alpha and color values are stored. ... " />
+            <marker date="1503523592959" expanded="true" signature="20136:20876" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="20192:20244" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="20277:20824" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="20318:20554" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="20395:20536" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="20575:20810" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="20652:20792" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="20905:20954" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="21011:21474" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="21484:21632" ph="/* Creates a vertex buffer object with the right size to fit the complete data. ... */" />
+            <marker date="1503523592959" expanded="true" signature="21694:21788" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="21798:21946" ph="/* Creates a vertex buffer object with the right size to fit the complete data. ... */" />
+            <marker date="1503523592959" expanded="true" signature="22028:22475" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="22249:22370" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="22597:23097" ph="{...}" />
+            <marker date="1503523592959" expanded="true" signature="22641:23087" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/424808B4-44B1-450F-9BCD-380C84F9DA9D/29/876cb535/__DynamicallyInvokableAttribute.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/424808B4-44B1-450F-9BCD-380C84F9DA9D/c3/224bc0af/Vector4.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="27" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Rendering/Vertex.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding>
+            <marker date="1503523591511" expanded="false" signature="7:58" ph="..." />
+            <marker date="1503523591511" expanded="true" signature="83:1627" ph="{...}" />
+            <marker date="1503523591511" expanded="true" signature="152:1625" ph="{...}" />
+            <marker date="1503523591511" expanded="true" signature="377:589" ph="/// Copies the source to the target array. Note that this is an unsafe operation, if you supply wrong offset/coun ... " />
+            <marker date="1503523591511" expanded="true" signature="709:1447" ph="{...}" />
+            <marker date="1503523591511" expanded="true" signature="732:912" ph="/* The following fixed statement pins the location of the source and ... */" />
+            <marker date="1503523591511" expanded="true" signature="975:1437" ph="{...}" />
+            <marker date="1503523591511" expanded="true" signature="1304:1423" ph="{...}" />
+            <marker date="1503523591511" expanded="true" signature="1490:1619" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Geom/Vector2.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3279">
+          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding>
+            <marker date="1503523593207" expanded="false" signature="6:51" ph="..." />
+            <marker date="1503523593207" expanded="true" signature="75:6940" ph="{...}" />
+            <marker date="1503523593207" expanded="true" signature="82:330" ph="///Represents a 2D vector using two single-precision floating-point numbers. ... " />
+            <marker date="1503523593207" expanded="true" signature="439:6937" ph="{...}" />
+            <marker date="1503523593207" expanded="true" signature="454:716" ph="Fields" />
+            <marker date="1503523593207" expanded="true" signature="478:558" ph="/// The X component of the Vector2. ... " />
+            <marker date="1503523593207" expanded="true" signature="592:672" ph="/// The Y component of the Vector2. ... " />
+            <marker date="1503523593207" expanded="true" signature="726:946" ph="/// Constructs a new Vector2. ... " />
+            <marker date="1503523593207" expanded="true" signature="987:1045" ph="{...}" />
+            <marker date="1503523593207" expanded="true" signature="1055:4954" ph="Operators" />
+            <marker date="1503523593207" expanded="true" signature="1082:1319" ph="/// Adds the specified instances. ... " />
+            <marker date="1503523593207" expanded="true" signature="1389:1496" ph="{...}" />
+            <marker date="1503523593207" expanded="true" signature="1506:1751" ph="/// Subtracts the specified instances. ... " />
+            <marker date="1503523593207" expanded="true" signature="1821:1928" ph="{...}" />
+            <marker date="1503523593207" expanded="true" signature="1938:2116" ph="/// Negates the specified instance. ... " />
+            <marker date="1503523593207" expanded="true" signature="2170:2270" ph="{...}" />
+            <marker date="1503523593207" expanded="true" signature="2280:2539" ph="/// Multiplies the specified instance by a scalar. ... " />
+            <marker date="1503523593207" expanded="true" signature="2606:2706" ph="{...}" />
+            <marker date="1503523593207" expanded="true" signature="2716:2975" ph="/// Multiplies the specified instance by a scalar. ... " />
+            <marker date="1503523593207" expanded="true" signature="3042:3142" ph="{...}" />
+            <marker date="1503523593207" expanded="true" signature="3152:3444" ph="/// Component-wise multiplication between the specified instance by a scale vector. ... " />
+            <marker date="1503523593207" expanded="true" signature="3513:3617" ph="{...}" />
+            <marker date="1503523593207" expanded="true" signature="3627:3879" ph="/// Divides the specified instance by a scalar. ... " />
+            <marker date="1503523593207" expanded="true" signature="3946:4083" ph="{...}" />
+            <marker date="1503523593207" expanded="true" signature="4093:4378" ph="/// Compares the specified instances for equality. ... " />
+            <marker date="1503523593207" expanded="true" signature="4446:4505" ph="{...}" />
+            <marker date="1503523593207" expanded="true" signature="4515:4806" ph="/// Compares the specified instances for inequality. ... " />
+            <marker date="1503523593207" expanded="true" signature="4874:4934" ph="{...}" />
+            <marker date="1503523593207" expanded="true" signature="4964:6438" ph="Overrides" />
+            <marker date="1503523593207" expanded="true" signature="4991:5454" ph="public override string ToString()" />
+            <marker date="1503523593207" expanded="true" signature="5160:5301" ph="/// Returns a System.String that represents the current Vector2. ... " />
+            <marker date="1503523593207" expanded="true" signature="5343:5434" ph="{...}" />
+            <marker date="1503523593207" expanded="true" signature="5464:5897" ph="public override int GetHashCode()" />
+            <marker date="1503523593207" expanded="true" signature="5515:5699" ph="/// Returns the hashcode for this instance. ... " />
+            <marker date="1503523593207" expanded="true" signature="5741:5877" ph="{...}" />
+            <marker date="1503523593207" expanded="true" signature="5773:5867" ph="{...}" />
+            <marker date="1503523593207" expanded="true" signature="5907:6418" ph="public override bool Equals(object obj)" />
+            <marker date="1503523593207" expanded="true" signature="5964:6223" ph="/// Indicates whether this instance and a specified object are equal. ... " />
+            <marker date="1503523593207" expanded="true" signature="6271:6398" ph="{...}" />
+            <marker date="1503523593207" expanded="true" signature="6448:6931" ph="IEquatable&lt;Vector2&gt; Members" />
+            <marker date="1503523593207" expanded="true" signature="6493:6768" ph="///Indicates whether the current vector is equal to another vector. ... " />
+            <marker date="1503523593207" expanded="true" signature="6810:6911" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Rendering/VertexColor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1503523593343" expanded="true" signature="62:247" ph="{...}" />
+            <marker date="1503523593343" expanded="true" signature="141:245" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EE9AEB58-D5A6-42B8-B3A9-E2ACF6F2E8FB/8b/c2513cdc/Vertex2f.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="31" column="17" lean-forward="false" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+          <folding>
+            <marker date="1504130078348" expanded="true" signature="0:284" ph="/* Decompiled with JetBrains decompiler ... */" />
+            <marker date="1504130078348" expanded="false" signature="292:363" ph="..." />
+            <marker date="1504130078348" expanded="true" signature="381:22958" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="654:22956" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="1715:1842" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="1731:1836" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="1927:2038" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="1943:1982" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="1992:2032" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="2123:2234" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="2139:2178" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="2188:2228" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="2240:3007" ph="///Vertex components indexer. ... " />
+            <marker date="1504130078348" expanded="true" signature="3039:3596" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="3055:3363" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="3084:3355" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="3373:3590" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="3409:3543" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="3602:3764" ph="///Vertex2f constructor. ... " />
+            <marker date="1504130078348" expanded="true" signature="3793:3838" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="3844:4008" ph="///Vertex2f constructor. ... " />
+            <marker date="1504130078348" expanded="true" signature="4039:4090" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="4096:4352" ph="///Vertex2f constructor. ... " />
+            <marker date="1504130078348" expanded="true" signature="4390:4438" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="4444:4615" ph="///Vertex2f constructor. ... " />
+            <marker date="1504130078348" expanded="true" signature="4651:4708" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="4714:4973" ph="///Cast to float[] operator. ... " />
+            <marker date="1504130078348" expanded="true" signature="5029:5080" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="5086:5354" ph="///Cast to Vertex2d operator. ... " />
+            <marker date="1504130078348" expanded="true" signature="5411:5478" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="5484:5787" ph="///Cast to Vertex3f operator. ... " />
+            <marker date="1504130078348" expanded="true" signature="5844:5899" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="5905:6173" ph="///Cast to Vertex3d operator. ... " />
+            <marker date="1504130078348" expanded="true" signature="6230:6302" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="6308:6619" ph="///Cast to Vertex3f operator. ... " />
+            <marker date="1504130078348" expanded="true" signature="6676:6735" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="6741:7009" ph="///Cast to Vertex4d operator. ... " />
+            <marker date="1504130078348" expanded="true" signature="7066:7143" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="7149:7337" ph="///Negate operator. ... " />
+            <marker date="1504130078348" expanded="true" signature="7387:7438" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="7444:7877" ph="///Add operator. ... " />
+            <marker date="1504130078348" expanded="true" signature="7941:8065" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="8071:8512" ph="///Subtract operator. ... " />
+            <marker date="1504130078348" expanded="true" signature="8576:8700" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="8706:9164" ph="///Scalar multiply operator. ... " />
+            <marker date="1504130078348" expanded="true" signature="9229:9357" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="9363:9821" ph="///Scalar multiply operator. ... " />
+            <marker date="1504130078348" expanded="true" signature="9887:10031" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="10037:10487" ph="///Scalar divide operator. ... " />
+            <marker date="1504130078348" expanded="true" signature="10552:10680" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="10686:11136" ph="///Scalar divide operator. ... " />
+            <marker date="1504130078348" expanded="true" signature="11202:11346" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="11352:11831" ph="///Dot product operator. ... " />
+            <marker date="1504130078348" expanded="true" signature="11892:11990" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="11996:12133" ph="///Equality operator. ... " />
+            <marker date="1504130078348" expanded="true" signature="12194:12245" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="12251:12390" ph="///Inequality operator. ... " />
+            <marker date="1504130078348" expanded="true" signature="12451:12503" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="12509:12777" ph="///Less than operator. ... " />
+            <marker date="1504130078348" expanded="true" signature="12837:12956" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="12962:13233" ph="///Greater than operator. ... " />
+            <marker date="1504130078348" expanded="true" signature="13293:13412" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="13418:13710" ph="///Less than or equal to operator. ... " />
+            <marker date="1504130078348" expanded="true" signature="13771:13892" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="13898:14193" ph="///Greater than or equal to operator. ... " />
+            <marker date="1504130078348" expanded="true" signature="14254:14375" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="14381:14504" ph="///Compute bidimensional vertex module. ... " />
+            <marker date="1504130078348" expanded="true" signature="14530:14631" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="14717:14860" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="14866:15163" ph="/// Get the minimum of an array of Vertex2f, component-wise. ... " />
+            <marker date="1504130078348" expanded="true" signature="15215:15558" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="15411:15513" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="15564:15994" ph="/// Get the minimum of an array of Vertex2f, component-wise. ... " />
+            <marker date="1504130078348" expanded="true" signature="16057:16558" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="16267:16513" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="16564:16861" ph="/// Get the maximum of an array of Vertex2f, component-wise. ... " />
+            <marker date="1504130078348" expanded="true" signature="16913:17256" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="17109:17211" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="17262:17692" ph="/// Get the maximum of an array of Vertex2f, component-wise. ... " />
+            <marker date="1504130078348" expanded="true" signature="17755:18256" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="17965:18211" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="18262:18732" ph="/// Get the minimum and maximum of an array of Vertex2f, component-wise. ... " />
+            <marker date="1504130078348" expanded="true" signature="18812:19387" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="19093:19305" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="19393:19994" ph="/// Get the minimum and maximum of an array of Vertex2f, component-wise. ... " />
+            <marker date="1504130078348" expanded="true" signature="20092:20930" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="20372:20848" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="20936:21258" ph="/// Indicates whether the this IVertex3 is equal to another IVertex3. ... " />
+            <marker date="1504130078348" expanded="true" signature="21297:21461" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="21467:21957" ph="/// Determines whether the specified &lt;see cref=&quot;T:System.Object&quot; /&gt; is equal to the current &lt;see cref=&quot;T:System.O ... " />
+            <marker date="1504130078348" expanded="true" signature="22001:22204" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="22062:22122" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="22160:22198" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="22210:22536" ph="/// Serves as a hash function for a particular type. &lt;see cref=&quot;M:System.Object.GetHashCode&quot; /&gt; is suitable for ... " />
+            <marker date="1504130078348" expanded="true" signature="22574:22650" ph="{...}" />
+            <marker date="1504130078348" expanded="true" signature="22656:22820" ph="///Stringify this Vertex2f. ... " />
+            <marker date="1504130078348" expanded="true" signature="22858:22952" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EE9AEB58-D5A6-42B8-B3A9-E2ACF6F2E8FB/08/f347df11/Vertex4f.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <folding>
+            <marker date="1504130010451" expanded="true" signature="0:284" ph="/* Decompiled with JetBrains decompiler ... */" />
+            <marker date="1504130010451" expanded="false" signature="292:386" ph="..." />
+            <marker date="1504130010451" expanded="true" signature="404:24687" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="699:24685" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="2088:2215" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="2104:2209" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="2300:2411" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="2316:2355" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="2365:2405" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="2496:2607" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="2512:2551" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="2561:2601" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="2692:2803" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="2708:2747" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="2757:2797" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="2888:2999" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="2904:2943" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="2953:2993" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="3005:3772" ph="///Vertex components indexer. ... " />
+            <marker date="1504130010451" expanded="true" signature="3804:4544" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="3820:4134" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="3849:4126" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="4144:4538" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="4173:4530" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="4550:4720" ph="///Vertex4f constructor. ... " />
+            <marker date="1504130010451" expanded="true" signature="4749:4800" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="4806:4970" ph="///Vertex4f constructor. ... " />
+            <marker date="1504130010451" expanded="true" signature="5001:5064" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="5070:5456" ph="///Vertex4f constructor. ... " />
+            <marker date="1504130010451" expanded="true" signature="5503:5555" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="5561:6061" ph="///Vertex4f constructor. ... " />
+            <marker date="1504130010451" expanded="true" signature="6117:6201" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="6207:6378" ph="///Vertex4f constructor. ... " />
+            <marker date="1504130010451" expanded="true" signature="6414:6489" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="6495:6754" ph="///Cast to float[] operator. ... " />
+            <marker date="1504130010451" expanded="true" signature="6810:6871" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="6877:7187" ph="///Cast to Vertex3f operator. ... " />
+            <marker date="1504130010451" expanded="true" signature="7244:7316" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="7322:7590" ph="///Cast to Vertex2f operator. ... " />
+            <marker date="1504130010451" expanded="true" signature="7647:7750" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="7756:8024" ph="///Cast to Vertex3d operator. ... " />
+            <marker date="1504130010451" expanded="true" signature="8081:8223" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="8229:8497" ph="///Cast to Vertex4d operator. ... " />
+            <marker date="1504130010451" expanded="true" signature="8554:8649" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="8655:8843" ph="///Negate operator. ... " />
+            <marker date="1504130010451" expanded="true" signature="8893:8956" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="8962:9395" ph="///Add operator. ... " />
+            <marker date="1504130010451" expanded="true" signature="9459:9647" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="9653:10094" ph="///Subtract operator. ... " />
+            <marker date="1504130010451" expanded="true" signature="10158:10346" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="10352:10810" ph="///Scalar multiply operator. ... " />
+            <marker date="1504130010451" expanded="true" signature="10875:11071" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="11077:11535" ph="///Scalar multiply operator. ... " />
+            <marker date="1504130010451" expanded="true" signature="11601:11829" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="11835:12285" ph="///Scalar divide operator. ... " />
+            <marker date="1504130010451" expanded="true" signature="12350:12546" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="12552:13002" ph="///Scalar divide operator. ... " />
+            <marker date="1504130010451" expanded="true" signature="13068:13296" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="13302:13756" ph="///Transform vertex using transformation matrix. ... " />
+            <marker date="1504130010451" expanded="true" signature="13819:14567" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="14573:14710" ph="///Equality operator. ... " />
+            <marker date="1504130010451" expanded="true" signature="14771:14822" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="14828:14967" ph="///Inequality operator. ... " />
+            <marker date="1504130010451" expanded="true" signature="15028:15080" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="15086:15210" ph="///Compute tridimensional vertex module. ... " />
+            <marker date="1504130010451" expanded="true" signature="15236:15287" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="15373:15547" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="15553:15850" ph="/// Get the minimum of an array of Vertex4f, component-wise. ... " />
+            <marker date="1504130010451" expanded="true" signature="15902:16320" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="16326:16756" ph="/// Get the minimum of an array of Vertex4f, component-wise. ... " />
+            <marker date="1504130010451" expanded="true" signature="16819:17500" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="17506:17803" ph="/// Get the maximum of an array of Vertex4f, component-wise. ... " />
+            <marker date="1504130010451" expanded="true" signature="17855:18273" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="18279:18709" ph="/// Get the maximum of an array of Vertex4f, component-wise. ... " />
+            <marker date="1504130010451" expanded="true" signature="18772:19453" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="19459:19929" ph="/// Get the minimum and maximum of an array of Vertex4f, component-wise. ... " />
+            <marker date="1504130010451" expanded="true" signature="20009:20700" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="20324:20564" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="20706:21307" ph="/// Get the minimum and maximum of an array of Vertex4f, component-wise. ... " />
+            <marker date="1504130010451" expanded="true" signature="21405:22359" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="21719:22223" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="22365:22687" ph="/// Indicates whether the this IVertex4 is equal to another IVertex4. ... " />
+            <marker date="1504130010451" expanded="true" signature="22726:23016" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="23022:23512" ph="/// Determines whether the specified &lt;see cref=&quot;T:System.Object&quot; /&gt; is equal to the current &lt;see cref=&quot;T:System.O ... " />
+            <marker date="1504130010451" expanded="true" signature="23556:23759" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="23617:23677" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="23715:23753" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="23765:24091" ph="/// Serves as a hash function for a particular type. &lt;see cref=&quot;M:System.Object.GetHashCode&quot; /&gt; is suitable for ... " />
+            <marker date="1504130010451" expanded="true" signature="24129:24267" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="24273:24437" ph="///Stringify this Vertex4f. ... " />
+            <marker date="1504130010451" expanded="true" signature="24475:24681" ph="{...}" />
+            <marker date="1504130010451" expanded="true" signature="24565:24673" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Rendering/OpenGLDebugCallback.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <marker date="1503523591810" expanded="false" signature="6:65" ph="..." />
+            <marker date="1503523591810" expanded="true" signature="89:1683" ph="{...}" />
+            <marker date="1503523591810" expanded="true" signature="126:1680" ph="{...}" />
+            <marker date="1503523591810" expanded="true" signature="355:493" ph="{...}" />
+            <marker date="1503523591810" expanded="true" signature="400:483" ph="{...}" />
+            <marker date="1503523591810" expanded="true" signature="532:1031" ph="{...}" />
+            <marker date="1503523591810" expanded="true" signature="558:728" ph="{...}" />
+            <marker date="1503523591810" expanded="true" signature="761:1021" ph="{...}" />
+            <marker date="1503523591810" expanded="true" signature="1194:1674" ph="{...}" />
+            <marker date="1503523591810" expanded="true" signature="1353:1481" ph="{...}" />
+            <marker date="1503523591810" expanded="true" signature="1536:1664" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowSharp.Desktop/Core/DesktopViewController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+          <folding>
+            <marker date="1503523592091" expanded="false" signature="6:147" ph="..." />
+            <marker date="1503523592091" expanded="true" signature="171:5032" ph="{...}" />
+            <marker date="1503523592091" expanded="true" signature="219:5030" ph="{...}" />
+            <marker date="1503523592091" expanded="true" signature="719:1173" ph="{...}" />
+            <marker date="1503523592091" expanded="true" signature="971:1163" ph="{...}" />
+            <marker date="1503523592091" expanded="true" signature="1203:1521" ph="{...}" />
+            <marker date="1503523592091" expanded="true" signature="1307:1381" ph="{...}" />
+            <marker date="1503523592091" expanded="true" signature="1428:1511" ph="{...}" />
+            <marker date="1503523592091" expanded="true" signature="1639:2484" ph="{...}" />
+            <marker date="1503523592091" expanded="true" signature="2560:2880" ph="{...}" />
+            <marker date="1503523592091" expanded="true" signature="2957:3054" ph="{...}" />
+            <marker date="1503523592091" expanded="true" signature="3122:3642" ph="{...}" />
+            <marker date="1503523592091" expanded="true" signature="3208:3632" ph="{...}" />
+            <marker date="1503523592091" expanded="true" signature="3337:3415" ph="{...}" />
+            <marker date="1503523592091" expanded="true" signature="3520:3618" ph="{...}" />
+            <marker date="1503523592091" expanded="true" signature="3701:3798" ph="{...}" />
+            <marker date="1503523592091" expanded="true" signature="3897:4059" ph="{...}" />
+            <marker date="1503523592091" expanded="true" signature="3954:4049" ph="{...}" />
+            <marker date="1503523592091" expanded="true" signature="4126:4399" ph="{...}" />
+            <marker date="1503523592091" expanded="true" signature="4183:4278" ph="{...}" />
+            <marker date="1503523592091" expanded="true" signature="4295:4389" ph="{...}" />
+            <marker date="1503523592091" expanded="true" signature="4470:4541" ph="{...}" />
+            <marker date="1503523592091" expanded="true" signature="4598:5024" ph="{...}" />
+            <marker date="1503523592091" expanded="true" signature="4636:5001" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/ComputeShaderTest.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="97" column="18" lean-forward="true" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
+          <folding>
+            <marker date="1504136533412" expanded="true" signature="7:253" ph="..." />
+            <marker date="1504136533412" expanded="true" signature="283:4418" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="327:4416" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="574:2728" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="2808:2964" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="3090:3331" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="3141:3269" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="3385:4256" ph="{...}" />
+            <marker date="1504136533412" expanded="true" signature="4266:4410" ph="/* public override Rectangle BoundsInSpace(DisplayObject targetSpace) ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/lightComputeShader.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

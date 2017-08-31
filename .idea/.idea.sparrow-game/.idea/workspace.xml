@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43ede7a6-3681-4dbd-bc34-18b50d021014" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SparrowGame.Shared/testbg_transparency.png" afterPath="$PROJECT_DIR$/SparrowGame.Shared/testbg_transparency.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.sparrow-game/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.sparrow-game/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SparrowGame.Shared/ComputeShaderTest.cs" afterPath="$PROJECT_DIR$/SparrowGame.Shared/ComputeShaderTest.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SparrowGame.Shared/lightComputeShader.glsl" afterPath="$PROJECT_DIR$/SparrowGame.Shared/lightComputeShader.glsl" />
@@ -18,17 +19,49 @@
     <favorites_list name="sparrow-game" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4253491">
+    <splitter split-orientation="horizontal" split-proportion="0.44038668">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="ComputeShaderTest.cs" pinned="false" current-in-tab="true">
+          <file leaf-file-name="ComputeShaderTest.cs" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/ComputeShaderTest.cs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="293">
-                  <caret line="95" column="36" lean-forward="false" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
+                <state relative-caret-position="369">
+                  <caret line="88" column="55" lean-forward="false" selection-start-line="88" selection-start-column="55" selection-end-line="88" selection-end-column="55" />
                   <folding>
-                    <marker date="1504215381330" expanded="true" signature="4171:4412" ph="{...}" />
-                    <marker date="1504215381330" expanded="true" signature="4222:4350" ph="{...}" />
+                    <marker date="1504220708744" expanded="true" signature="1887:2115" ph="{...}" />
+                    <marker date="1504220708744" expanded="true" signature="3191:3339" ph="{...}" />
+                    <marker date="1504220708744" expanded="true" signature="4216:4457" ph="{...}" />
+                    <marker date="1504220708744" expanded="true" signature="4267:4395" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="RenderTexture.cs" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Textures/RenderTexture.cs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="437">
+                  <caret line="182" column="35" lean-forward="false" selection-start-line="182" selection-start-column="35" selection-end-line="182" selection-end-column="35" />
+                  <folding>
+                    <marker date="1503523592835" expanded="false" signature="6:145" ph="..." />
+                    <marker date="1503523592835" expanded="true" signature="173:7784" ph="{...}" />
+                    <marker date="1503523592835" expanded="true" signature="180:1340" ph="/// A RenderTexture is a dynamic texture on which you can draw any display object. ... " />
+                    <marker date="1503523592835" expanded="true" signature="1384:7782" ph="{...}" />
+                    <marker date="1503523592835" expanded="true" signature="1543:2107" ph="/* Creates a new RenderTexture with a certain size(in points). If the texture is ... */" />
+                    <marker date="1503523592835" expanded="true" signature="2259:2604" ph="{...}" />
+                    <marker date="1503523592835" expanded="true" signature="2301:2378" ph="{...}" />
+                    <marker date="1503523592835" expanded="true" signature="2644:2765" ph="{...}" />
+                    <marker date="1503523592835" expanded="true" signature="2775:3593" ph="/* Draws an object into the texture. Note that any filters on the object will currently ... */" />
+                    <marker date="1503523592835" expanded="true" signature="3728:4002" ph="{...}" />
+                    <marker date="1503523592835" expanded="true" signature="3802:3874" ph="{...}" />
+                    <marker date="1503523592835" expanded="true" signature="3891:3992" ph="{...}" />
+                    <marker date="1503523592835" expanded="true" signature="4012:4481" ph="/* Bundles several calls to &lt;code&gt;draw&lt;/code&gt; together in a block. This avoids buffer ... */" />
+                    <marker date="1503523592835" expanded="true" signature="4556:4667" ph="{...}" />
+                    <marker date="1503523592835" expanded="true" signature="4759:5952" ph="{...}" />
+                    <marker date="1503523592835" expanded="true" signature="6167:7068" ph="{...}" />
+                    <marker date="1503523592835" expanded="true" signature="6813:6874" ph="{...}" />
+                    <marker date="1503523592835" expanded="true" signature="7078:7217" ph="/* Clears the render texture with a certain color and alpha value. Call without any ... */" />
+                    <marker date="1503523592835" expanded="true" signature="7279:7385" ph="{...}" />
                   </folding>
                 </state>
               </provider>
@@ -49,6 +82,28 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="OpenGLDebugCallback.cs" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Rendering/OpenGLDebugCallback.cs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="540">
+                  <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+                  <folding>
+                    <marker date="1503523591810" expanded="false" signature="6:65" ph="..." />
+                    <marker date="1503523591810" expanded="true" signature="89:1683" ph="{...}" />
+                    <marker date="1503523591810" expanded="true" signature="126:1680" ph="{...}" />
+                    <marker date="1503523591810" expanded="true" signature="355:493" ph="{...}" />
+                    <marker date="1503523591810" expanded="true" signature="400:483" ph="{...}" />
+                    <marker date="1503523591810" expanded="true" signature="532:1031" ph="{...}" />
+                    <marker date="1503523591810" expanded="true" signature="558:728" ph="{...}" />
+                    <marker date="1503523591810" expanded="true" signature="761:1021" ph="{...}" />
+                    <marker date="1503523591810" expanded="true" signature="1194:1674" ph="{...}" />
+                    <marker date="1503523591810" expanded="true" signature="1353:1481" ph="{...}" />
+                    <marker date="1503523591810" expanded="true" signature="1536:1664" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -56,8 +111,8 @@
           <file leaf-file-name="lightComputeShader.glsl" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/lightComputeShader.glsl">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="247">
-                  <caret line="52" column="20" lean-forward="false" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+                <state relative-caret-position="418">
+                  <caret line="55" column="53" lean-forward="false" selection-start-line="55" selection-start-column="53" selection-end-line="55" selection-end-column="53" />
                   <folding />
                 </state>
               </provider>
@@ -90,7 +145,9 @@
     <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Touches/Touch.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Touches/TouchPhase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/424808B4-44B1-450F-9BCD-380C84F9DA9D/c3/224bc0af/Vector4.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Textures/ConcreteTexture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/424808B4-44B1-450F-9BCD-380C84F9DA9D/29/876cb535/__DynamicallyInvokableAttribute.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Textures/RenderTexture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SparrowGame.Android/MainActivity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Core/SparrowSharp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Rendering/VertexColor.cs" root0="FORCE_HIGHLIGHTING" />
@@ -139,8 +196,8 @@
         <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EE9AEB58-D5A6-42B8-B3A9-E2ACF6F2E8FB/08/f347df11/Vertex4f.cs" />
         <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EE9AEB58-D5A6-42B8-B3A9-E2ACF6F2E8FB/8b/c2513cdc/Vertex2f.cs" />
         <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EE9AEB58-D5A6-42B8-B3A9-E2ACF6F2E8FB/8e/78578a3a/Gl.cs" />
-        <option value="$PROJECT_DIR$/SparrowGame.Shared/lightComputeShader.glsl" />
         <option value="$PROJECT_DIR$/SparrowGame.Shared/ComputeShaderTest.cs" />
+        <option value="$PROJECT_DIR$/SparrowGame.Shared/lightComputeShader.glsl" />
       </list>
     </option>
   </component>
@@ -187,25 +244,7 @@
               <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SparrowShared" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sparrow-game (5 projects)" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SparrowShared" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rendering" />
+              <option name="myItemId" value="SparrowGame.Shared" />
               <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
           </PATH>
@@ -307,7 +346,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.521978" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48826817" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1009667" sideWeight="0.49417636" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17561762" sideWeight="0.49417636" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -361,24 +400,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/ComputeShaderTest.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="58" column="40" lean-forward="false" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
-          <folding>
-            <marker date="1504215381330" expanded="true" signature="4171:4412" ph="{...}" />
-            <marker date="1504215381330" expanded="true" signature="4222:4350" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Touches/TouchProcessor.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowSharp.Desktop/Core/DesktopViewController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2413">
@@ -405,8 +426,10 @@
         <state relative-caret-position="1254">
           <caret line="66" column="33" lean-forward="true" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
           <folding>
-            <marker date="1504215381330" expanded="true" signature="4171:4412" ph="{...}" />
-            <marker date="1504215381330" expanded="true" signature="4222:4350" ph="{...}" />
+            <marker date="1504220708744" expanded="true" signature="1887:2115" ph="{...}" />
+            <marker date="1504220708744" expanded="true" signature="3191:3339" ph="{...}" />
+            <marker date="1504220708744" expanded="true" signature="4216:4457" ph="{...}" />
+            <marker date="1504220708744" expanded="true" signature="4267:4395" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -416,8 +439,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1504215381330" expanded="true" signature="4171:4412" ph="{...}" />
-            <marker date="1504215381330" expanded="true" signature="4222:4350" ph="{...}" />
+            <marker date="1504220708744" expanded="true" signature="1887:2115" ph="{...}" />
+            <marker date="1504220708744" expanded="true" signature="3191:3339" ph="{...}" />
+            <marker date="1504220708744" expanded="true" signature="4216:4457" ph="{...}" />
+            <marker date="1504220708744" expanded="true" signature="4267:4395" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -434,8 +459,10 @@
         <state relative-caret-position="1159">
           <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding>
-            <marker date="1504215381330" expanded="true" signature="4171:4412" ph="{...}" />
-            <marker date="1504215381330" expanded="true" signature="4222:4350" ph="{...}" />
+            <marker date="1504220708744" expanded="true" signature="1887:2115" ph="{...}" />
+            <marker date="1504220708744" expanded="true" signature="3191:3339" ph="{...}" />
+            <marker date="1504220708744" expanded="true" signature="4216:4457" ph="{...}" />
+            <marker date="1504220708744" expanded="true" signature="4267:4395" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -459,8 +486,10 @@
         <state relative-caret-position="1254">
           <caret line="71" column="19" lean-forward="false" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
           <folding>
-            <marker date="1504215381330" expanded="true" signature="4171:4412" ph="{...}" />
-            <marker date="1504215381330" expanded="true" signature="4222:4350" ph="{...}" />
+            <marker date="1504220708744" expanded="true" signature="1887:2115" ph="{...}" />
+            <marker date="1504220708744" expanded="true" signature="3191:3339" ph="{...}" />
+            <marker date="1504220708744" expanded="true" signature="4216:4457" ph="{...}" />
+            <marker date="1504220708744" expanded="true" signature="4267:4395" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -477,16 +506,6 @@
         <state relative-caret-position="189">
           <caret line="51" column="27" lean-forward="false" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/testbg_transparency.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/testbg.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://C:/Program Files (x86)/NuGet/Config/Microsoft.VisualStudio.Offline.config">
@@ -591,13 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="21" column="174" lean-forward="false" selection-start-line="21" selection-start-column="174" selection-end-line="21" selection-end-column="174" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Rendering/Painter.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="566" column="23" lean-forward="false" selection-start-line="566" selection-start-column="23" selection-end-line="566" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -786,6 +798,201 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Textures/RenderTexture.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="182" column="35" lean-forward="false" selection-start-line="182" selection-start-column="35" selection-end-line="182" selection-end-column="35" />
+          <folding>
+            <marker date="1503523592835" expanded="false" signature="6:145" ph="..." />
+            <marker date="1503523592835" expanded="true" signature="173:7784" ph="{...}" />
+            <marker date="1503523592835" expanded="true" signature="180:1340" ph="/// A RenderTexture is a dynamic texture on which you can draw any display object. ... " />
+            <marker date="1503523592835" expanded="true" signature="1384:7782" ph="{...}" />
+            <marker date="1503523592835" expanded="true" signature="1543:2107" ph="/* Creates a new RenderTexture with a certain size(in points). If the texture is ... */" />
+            <marker date="1503523592835" expanded="true" signature="2259:2604" ph="{...}" />
+            <marker date="1503523592835" expanded="true" signature="2301:2378" ph="{...}" />
+            <marker date="1503523592835" expanded="true" signature="2644:2765" ph="{...}" />
+            <marker date="1503523592835" expanded="true" signature="2775:3593" ph="/* Draws an object into the texture. Note that any filters on the object will currently ... */" />
+            <marker date="1503523592835" expanded="true" signature="3728:4002" ph="{...}" />
+            <marker date="1503523592835" expanded="true" signature="3802:3874" ph="{...}" />
+            <marker date="1503523592835" expanded="true" signature="3891:3992" ph="{...}" />
+            <marker date="1503523592835" expanded="true" signature="4012:4481" ph="/* Bundles several calls to &lt;code&gt;draw&lt;/code&gt; together in a block. This avoids buffer ... */" />
+            <marker date="1503523592835" expanded="true" signature="4556:4667" ph="{...}" />
+            <marker date="1503523592835" expanded="true" signature="4759:5952" ph="{...}" />
+            <marker date="1503523592835" expanded="true" signature="6167:7068" ph="{...}" />
+            <marker date="1503523592835" expanded="true" signature="6813:6874" ph="{...}" />
+            <marker date="1503523592835" expanded="true" signature="7078:7217" ph="/* Clears the render texture with a certain color and alpha value. Call without any ... */" />
+            <marker date="1503523592835" expanded="true" signature="7279:7385" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Rendering/Painter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="500" column="20" lean-forward="false" selection-start-line="500" selection-start-column="20" selection-end-line="500" selection-end-column="20" />
+          <folding>
+            <marker date="1503523592188" expanded="false" signature="7:176" ph="..." />
+            <marker date="1503523592188" expanded="true" signature="205:29082" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="213:2002" ph="/* A class that orchestrates rendering of all Sparrow display objects. ... */" />
+            <marker date="1503523592188" expanded="true" signature="2027:29080" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="3427:3641" ph="/// Creates a new Painter object. Normally, it's not necessary to create any custom ... " />
+            <marker date="1503523592188" expanded="true" signature="3691:4677" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="4687:4803" ph="/// Disposes all mesh batches, programs, and the OpenGL render context. ... " />
+            <marker date="1503523592188" expanded="true" signature="4833:5019" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="5058:5415" ph="/* Sets the viewport dimensions and other attributes of the rendering buffer. ... */" />
+            <marker date="1503523592188" expanded="true" signature="5475:5592" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="5633:5760" ph="/* Registers a program under a certain name. ... */" />
+            <marker date="1503523592188" expanded="true" signature="5826:5920" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="6022:6225" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="6113:6215" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="6235:6407" ph="/// Returns the program registered under a certain name, or null if no program with ... " />
+            <marker date="1503523592188" expanded="true" signature="6454:6572" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="6582:6689" ph="/// Indicates if a program is registered under a certain name. ... " />
+            <marker date="1503523592188" expanded="true" signature="6733:6800" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="6834:7167" ph="/* Pushes the current render state to a stack from which it can be restored later. ... */" />
+            <marker date="1503523592188" expanded="true" signature="7222:7570" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="7319:7436" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="7580:8055" ph="/* Modifies the current state with a transformation matrix, alpha factor, and blend mode. ... */" />
+            <marker date="1503523592188" expanded="true" signature="8207:8475" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="8485:8934" ph="/* Restores the render state that was last pushed to the stack. If this changes ... */" />
+            <marker date="1503523592188" expanded="true" signature="8988:9389" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="9034:9146" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="9301:9379" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="9417:10443" ph="/* Draws a display object into the stencil buffer, incrementing the buffer on each ... */" />
+            <marker date="1503523592188" expanded="true" signature="10521:10937" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="10613:10790" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="10807:10888" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="10947:11492" ph="/* Draws a display object into the stencil buffer, decrementing the ... */" />
+            <marker date="1503523592188" expanded="true" signature="11571:11842" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="11675:11734" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="11751:11832" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="11897:12286" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="11986:12091" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="12108:12185" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="12322:12682" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="12418:12532" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="12692:13052" ph="/// Figures out if the mask can be represented by a scissor rectangle; this is possible ... " />
+            <marker date="1503523592188" expanded="true" signature="13131:13776" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="13234:13740" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="13357:13534" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="13813:14230" ph="/* Adds a mesh to the current batch of unrendered meshes. If the current batch is not ... */" />
+            <marker date="1503523592188" expanded="true" signature="14296:14375" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="14488:14551" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="14655:15004" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="15051:15273" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="15284:15459" ph="/* Resets the current state, state stack, batch processor, stencil reference value, ... */" />
+            <marker date="1503523592188" expanded="true" signature="15491:15982" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="16036:16211" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="16220:16437" ph="/* Draws all meshes from the render cache between &lt;code&gt;startToken&lt;/code&gt; and ... */" />
+            <marker date="1503523592188" expanded="true" signature="16515:17909" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="16650:17899" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="16771:17857" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="16959:17299" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="17347:17554" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="17604:17839" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="17919:18490" ph="/// Prevents the object from being drawn from the render cache in the next frame. ... " />
+            <marker date="1503523592188" expanded="true" signature="18546:18671" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="18585:18661" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="18724:18961" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="18998:19232" ph="/* Applies all relevant state settings to at the render context. This includes ... */" />
+            <marker date="1503523592188" expanded="true" signature="19268:19380" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="19390:19564" ph="/* Clears the render context with a certain color and alpha value. Since this also ... */" />
+            <marker date="1503523592188" expanded="true" signature="19623:20012" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="20022:20114" ph="/// Resets the render target to the back buffer ... " />
+            <marker date="1503523592188" expanded="true" signature="20144:20204" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="20243:20492" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="20348:20482" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="20534:22524" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="20642:22514" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="20689:22076" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="20911:21599" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="21361:21509" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="21624:21942" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="21692:21847" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="22097:22454" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="22591:22855" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="22709:22845" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="22940:25566" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="23035:25356" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="23254:23410" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="23431:23561" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="24337:24631" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="24377:24520" ph="/* OpenGL positions the scissor rectangle from the bottom of the screen :( ... */" />
+            <marker date="1503523592188" expanded="true" signature="24926:25111" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="25373:25556" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="25451:25542" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="25678:25777" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="25787:26150" ph="/* Indicates if the render cache is enabled. Normally, this should be left at the default; ... */" />
+            <marker date="1503523592188" expanded="true" signature="26184:26559" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="26268:26549" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="26325:26535" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="26570:27086" ph="/* The current render state, containing some of the context settings, projection- and ... */" />
+            <marker date="1503523592188" expanded="true" signature="27156:27393" ph="/* Returns the index of the current frame &lt;strong&gt;if&lt;/strong&gt; the render cache is enabled; ... */" />
+            <marker date="1503523592188" expanded="true" signature="27422:27554" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="27668:27767" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="27777:28202" ph="/* Returns the current width of the back buffer. In most cases, this value is in pixels; ... */" />
+            <marker date="1503523592188" expanded="true" signature="28286:28712" ph="/* Returns the current height of the back buffer. In most cases, this value is in pixels; ... */" />
+            <marker date="1503523592188" expanded="true" signature="28843:29074" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="28860:29064" ph="{...}" />
+            <marker date="1503523592188" expanded="true" signature="28913:29016" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Textures/ConcreteTexture.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="161" column="23" lean-forward="false" selection-start-line="161" selection-start-column="23" selection-end-line="161" selection-end-column="23" />
+          <folding>
+            <marker date="1503523591690" expanded="false" signature="7:94" ph="..." />
+            <marker date="1503523591690" expanded="true" signature="122:7053" ph="{...}" />
+            <marker date="1503523591690" expanded="true" signature="129:799" ph="/// A ConcreteTexture wraps an OpenGL texture object, storing the properties of the texture ... " />
+            <marker date="1503523591690" expanded="true" signature="842:7051" ph="{...}" />
+            <marker date="1503523591690" expanded="true" signature="1151:1342" ph="/// Stores the pointer/array for the texture in the normal memory. ... " />
+            <marker date="1503523591690" expanded="true" signature="1385:1830" ph="///  Creates a ConcreteTexture object from a TextureBase, storing information about size, ... " />
+            <marker date="1503523591690" expanded="true" signature="2067:2483" ph="{...}" />
+            <marker date="1503523591690" expanded="true" signature="2539:2846" ph="{...}" />
+            <marker date="1503523591690" expanded="true" signature="2894:3173" ph="{...}" />
+            <marker date="1503523591690" expanded="true" signature="2993:3163" ph="{...}" />
+            <marker date="1503523591690" expanded="true" signature="3224:3520" ph="{...}" />
+            <marker date="1503523591690" expanded="true" signature="3375:3440" ph="{...}" />
+            <marker date="1503523591690" expanded="true" signature="3457:3510" ph="{...}" />
+            <marker date="1503523591690" expanded="true" signature="3530:3885" ph="/// Uploads image data to the GPU. It also generates bitmaps if specified. ... " />
+            <marker date="1503523591690" expanded="true" signature="3931:5221" ph="{...}" />
+            <marker date="1503523591690" expanded="true" signature="4007:4626" ph="{...}" />
+            <marker date="1503523591690" expanded="true" signature="4643:5099" ph="{...}" />
+            <marker date="1503523591690" expanded="true" signature="5133:5211" ph="{...}" />
+            <marker date="1503523591690" expanded="true" signature="5231:5399" ph="/// Clears the texture with a certain color and alpha value. The previous contents of the ... " />
+            <marker date="1503523591690" expanded="true" signature="5461:5997" ph="{...}" />
+            <marker date="1503523591690" expanded="true" signature="5524:5778" ph="{...}" />
+            <marker date="1503523591690" expanded="true" signature="6030:6158" ph="/// Indicates if the base texture was optimized for being used in a render texture. ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/testbg.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/testbg_transparency.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/ComputeShaderTest.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="88" column="55" lean-forward="false" selection-start-line="88" selection-start-column="55" selection-end-line="88" selection-end-column="55" />
+          <folding>
+            <marker date="1504220708744" expanded="true" signature="1887:2115" ph="{...}" />
+            <marker date="1504220708744" expanded="true" signature="3191:3339" ph="{...}" />
+            <marker date="1504220708744" expanded="true" signature="4216:4457" ph="{...}" />
+            <marker date="1504220708744" expanded="true" signature="4267:4395" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../sparrow-sharp/SparrowShared/Rendering/OpenGLDebugCallback.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -808,20 +1015,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/lightComputeShader.glsl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="52" column="20" lean-forward="false" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+        <state relative-caret-position="418">
+          <caret line="55" column="53" lean-forward="false" selection-start-line="55" selection-start-column="53" selection-end-line="55" selection-end-column="53" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SparrowGame.Shared/ComputeShaderTest.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="95" column="36" lean-forward="false" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
-          <folding>
-            <marker date="1504215381330" expanded="true" signature="4171:4412" ph="{...}" />
-            <marker date="1504215381330" expanded="true" signature="4222:4350" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>

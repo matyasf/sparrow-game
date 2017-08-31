@@ -28,7 +28,7 @@ namespace SparrowGame.Shared
             Texture bg = SimpleTextureLoader.LoadImageFromStream(loader.GetEmbeddedResourceStream("testbg.png"));
             Texture transp = SimpleTextureLoader.LoadImageFromStream(loader.GetEmbeddedResourceStream("testbg_transparency.png"));
 
-            Gl.BindImageTexture(0, texOutput, 0, false, 0, Gl.WRITE_ONLY, Gl.RGBA8);
+            Gl.BindImageTexture(0, texOutput, 0, false, 0, Gl.READ_WRITE, Gl.RGBA8);
             Gl.BindImageTexture(1, bg.Base, 0, false, 0, Gl.READ_ONLY, Gl.RGBA8);
             Gl.BindImageTexture(2, transp.Base, 0, false, 0, Gl.READ_ONLY, Gl.RGBA8);
 
@@ -47,15 +47,13 @@ namespace SparrowGame.Shared
             
             // SSBO to send variable length data
             allLightData = new LightData[10];
-            allLightData[0].color.x = 1f;
-            allLightData[0].color.y = 1f;
-            allLightData[0].color.z = 1f;
-            allLightData[0].color.w = 1f;
-
-            allLightData[1].color.x = 1f;
-            allLightData[1].color.y = 1f;
-            allLightData[1].color.z = 1f;
-            allLightData[1].color.w = 1f;
+            for (int i = 0; i < allLightData.Length; i++)
+            {
+                allLightData[i].color.x = 1f;
+                allLightData[i].color.y = 1f;
+                allLightData[i].color.z = 1f;
+                allLightData[i].color.w = 1f;                
+            }
             
             buffer = Gl.GenBuffer();
             Gl.BindBufferBase(Gl.UNIFORM_BUFFER, 3, buffer); // bind it to layout binding 3
@@ -81,19 +79,23 @@ namespace SparrowGame.Shared
         {
             painter.ExcludeFromCache(this);
             
+            Texture.Root.Clear(0,1);
+            
             Gl.UseProgram(_rayProgram);
 
-            allLightData[0].pos.x = _locX;
-            allLightData[0].pos.y = _locY;
-            allLightData[1].pos.x = _locX;
-            allLightData[1].pos.y = _locY+70;
+            for (int i = 0; i < allLightData.Length; i++)
+            {
+                allLightData[i].pos.x = _locX;
+                allLightData[i].pos.y = _locY + i * 100;                
+            }
+
             
             Gl.BindBufferBase(Gl.UNIFORM_BUFFER, 3, buffer); // bind it to layout binding 3
             uint bSize = (uint) (LightData.Size * allLightData.Length);
             Gl.BufferData(BufferTargetARB.UniformBuffer, bSize, allLightData, BufferUsageARB.StaticRead);
            
             int loc = Gl.GetUniformLocation(_rayProgram, "lightNum");
-            Gl.Uniform1(loc, (uint)2);
+            Gl.Uniform1(loc, (uint)2); // NUM LIGHTS
             
             Gl.BindBuffer(BufferTargetARB.UniformBuffer, 0); // unbind
             

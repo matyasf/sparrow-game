@@ -3,7 +3,7 @@
 // what if a light source comes in from outside of the map? -- it needs much bigger tex size (~1500x1500) and just a small part is visible
             
 layout (local_size_x = 128, local_size_y = 1) in; // product of all must be max 128. Local size of the shader
-layout (rgba8, binding = 0) uniform writeonly highp image2D img_output;
+layout (rgba8, binding = 0) uniform restrict highp image2D img_output;
 layout (rgba8, binding = 1) uniform readonly highp image2D colorTex; // determines color
 layout (rgba8, binding = 2) uniform readonly highp image2D transpTex; // determines transparency
 
@@ -47,16 +47,16 @@ void main () {
     vec4 transpPixel;
     vec4 colorPixel;
 	vec4 currentPixel;
+	vec4 currentOutPixel;
     ivec2 coords; 
-    float transmit = 0.0f;// light transmission constant coeficient <0,1>
+    float transmit = 0.002f;// light transmission constant coeficient <0,1>
     float currentAlpha;
 	for (uint i = 0u; i < lightNum; i++) {
-	    lightRay = light[i].lightColor; 
-        dt = normalize(endPoint - light[i].lightPos);
+	    lightRay = light[i].lightColor;
+        dt = normalize(endPoint - light[i].lightPos);// * 1.2f;
         t = light[i].lightPos;
         
     	for (float i = 0.0f; i < txrsiz; i++) {
-    		if (dot(endPoint - t, dt) < 0.5f) break;
     
     		coords.x = int(t.x);
     		coords.y = int(t.y);
@@ -68,12 +68,17 @@ void main () {
     		// calculate color
     		colorPixel = imageLoad(colorTex, coords);
     		lightRay.rgb = min(colorPixel.rgb, lightRay.rgb) - (1.0 - currentAlpha) - transmit; 
-    			
+    		
+    		currentOutPixel = imageLoad(img_output, coords);
+    		currentOutPixel.rgb = max(currentOutPixel.rgb, lightRay.rgb);
+    		currentOutPixel.a = lightRay.a;
+    		
     		// write color
-    		imageStore(img_output, coords, lightRay);
+    		imageStore(img_output, coords, currentOutPixel);
+    		//imageStore(img_output, coords, lightRay);
     
-    		//if (dot(endPoint - t, dt) <= 0.0f) break;
-    		//if (lightRay.r + lightRay.g + lightRay.b <= 0.001f) break;
+    		if (currentOutPixel.r + currentOutPixel.g + currentOutPixel.b < 0.1f) break;
+    		if (dot(endPoint - t, dt) < 0.6f) break;
     		t += dt;
     	}
 	}

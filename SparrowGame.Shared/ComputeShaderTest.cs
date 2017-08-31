@@ -1,6 +1,5 @@
 ﻿
 using System;
-using System.Numerics;
 using System.Runtime.InteropServices;
 using Sparrow.Display;
 using Sparrow.ResourceLoading;
@@ -8,7 +7,6 @@ using Sparrow.Textures;
 using Sparrow.Touches;
 using Sparrow.Rendering;
 using OpenGL;
-using Vector2 = Sparrow.Geom.Vector2;
 
 namespace SparrowGame.Shared
 {
@@ -48,45 +46,36 @@ namespace SparrowGame.Shared
             Touch += OnTouch;
             
             // SSBO to send variable length data
-            allLightData = new LightData[2];
+            allLightData = new LightData[10];
             allLightData[0].color.x = 1f;
             allLightData[0].color.y = 1f;
             allLightData[0].color.z = 1f;
             allLightData[0].color.w = 1f;
-            
+
             allLightData[1].color.x = 1f;
             allLightData[1].color.y = 1f;
             allLightData[1].color.z = 1f;
             allLightData[1].color.w = 1f;
             
-            ssbo = Gl.GenBuffer();
-            Gl.BindBufferBase(Gl.SHADER_STORAGE_BUFFER, 3, ssbo); // bind it to layout binding 3
-            //Gl.BindBuffer(BufferTargetARB.ShaderStorageBuffer, ssbo);
+            buffer = Gl.GenBuffer();
+            Gl.BindBufferBase(Gl.UNIFORM_BUFFER, 3, buffer); // bind it to layout binding 3
             uint bSize = (uint) (LightData.Size * allLightData.Length);
-            Gl.BufferData(BufferTargetARB.ShaderStorageBuffer, bSize, allLightData, BufferUsageARB.StaticRead);
-            //Gl.BindBuffer(BufferTargetARB.ShaderStorageBuffer, 0); // unbind
+            Gl.BufferData(BufferTargetARB.UniformBuffer, bSize, null, BufferUsageARB.DynamicDraw);
+            
+            Gl.BindBuffer(BufferTargetARB.UniformBuffer, 0); // unbind
         }
         
         [StructLayout(LayoutKind.Sequential)]
         struct LightData
         {
-            public const int Size = Vertex2f.Size + Vertex4f.Size;
-            public Vertex4f color;
-            public Vertex2f pos; 
+            public const int Size = 32;
+            public Vertex4f color; // size = 16
+            public Vertex2f pos;   // size = 4
+            private readonly Vertex2f padding;   // size = 4 Nedeed to pad to a vertex size
         }
 
         private LightData[] allLightData;
-        private uint ssbo;
-        
-        private void OnTouch(TouchEvent touch)
-        {
-            if (touch.Touches.Count > 0)
-            {
-                _locX = touch.Touches[0].GlobalX;
-                _locY = touch.Touches[0].GlobalY;
-            }
-            Console.WriteLine(_locX + " " + _locY);
-        }
+        private uint buffer;
 
         public override void Render(Painter painter)
         {
@@ -97,16 +86,33 @@ namespace SparrowGame.Shared
             allLightData[0].pos.x = _locX;
             allLightData[0].pos.y = _locY;
             allLightData[1].pos.x = _locX;
-            allLightData[1].pos.y = _locY;
-            Gl.BindBufferBase(Gl.SHADER_STORAGE_BUFFER, 3, ssbo); // bind it to layout binding 3
+            allLightData[1].pos.y = _locY+70;
+            
+            Gl.BindBufferBase(Gl.UNIFORM_BUFFER, 3, buffer); // bind it to layout binding 3
             uint bSize = (uint) (LightData.Size * allLightData.Length);
-            Gl.BufferData(BufferTargetARB.ShaderStorageBuffer, bSize, allLightData, BufferUsageARB.StaticRead);
+            Gl.BufferData(BufferTargetARB.UniformBuffer, bSize, allLightData, BufferUsageARB.StaticRead);
+           
+            int loc = Gl.GetUniformLocation(_rayProgram, "lightNum");
+            Gl.Uniform1(loc, (uint)2);
+            
+            Gl.BindBuffer(BufferTargetARB.UniformBuffer, 0); // unbind
             
             Gl.DispatchCompute(4, 4, 1); // 4x4 = 16 work groups
             // make sure writing to image has finished before read. Put this as close to the tex sampler code as possible
             Gl.MemoryBarrier(Gl.SHADER_IMAGE_ACCESS_BARRIER_BIT);
             base.Render(painter);
         }
+                
+        private void OnTouch(TouchEvent touch)
+        {
+            if (touch.Touches.Count > 0)
+            {
+                _locX = touch.Touches[0].GlobalX;
+                _locY = touch.Touches[0].GlobalY;
+            }
+            Console.WriteLine(_locX + " " + _locY);
+        }
+
 
         /*public override Rectangle BoundsInSpace(DisplayObject targetSpace)
         {

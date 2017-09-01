@@ -7,7 +7,7 @@ layout (rgba8, binding = 0) uniform restrict highp image2D img_output;
 layout (rgba8, binding = 1) uniform readonly highp image2D colorTex; // determines color
 layout (rgba8, binding = 2) uniform readonly highp image2D transpTex; // determines transparency
 
-#define MAX_NUM_TOTAL_LIGHTS 10
+#define MAX_NUM_TOTAL_LIGHTS 20
 struct LightData {
     vec4 lightColor; // light color and alpha
     vec2 lightPos; // light pos
@@ -21,14 +21,14 @@ uniform uint lightNum;
 
 void main () {
     float global_coords = float(gl_WorkGroupID.x); // postion in global work group; 0 = left, 1 = right, 2 = top, 3 = bottom
-	float global_coords2 = float(gl_WorkGroupID.y); // position in second global wg, determines which segment to render (0..3)
+    float global_coords2 = float(gl_WorkGroupID.y); // position in second global wg, determines which segment to render (0..3)
     float local_coords = float(gl_LocalInvocationID.x); // get position in local work group
-	vec2 bgSize =  vec2(imageSize(colorTex));
+    vec2 bgSize =  vec2(imageSize(colorTex));
     float txrsiz = 512.0f; 
     // determine coordinates where rendering ends
     vec2 endPoint = vec2(0.0f, 0.0f);
     if (global_coords < 2.0f) {// on the left or right
-	    endPoint.y = local_coords + global_coords2 * 128.0f;
+        endPoint.y = local_coords + global_coords2 * 128.0f;
         if (global_coords == 1.0f) { // right
             endPoint.x = txrsiz;
         }
@@ -39,47 +39,46 @@ void main () {
             endPoint.y = txrsiz;
         }
     }
-
+    
     // calculate light to the endpoint
     vec2 t;
     vec2 dt;
     vec4 lightRay; // initial light color
     vec4 transpPixel;
     vec4 colorPixel;
-	vec4 currentPixel;
-	vec4 currentOutPixel;
+    vec4 currentPixel;
+    vec4 currentOutPixel;
     ivec2 coords; 
     float transmit = 0.002f;// light transmission constant coeficient <0,1>
     float currentAlpha;
-	for (uint i = 0u; i < lightNum; i++) {
-	    lightRay = light[i].lightColor;
+    for (uint i = 0u; i < lightNum; i++) {
+        lightRay = light[i].lightColor;
         dt = normalize(endPoint - light[i].lightPos);// * 1.2f;
         t = light[i].lightPos;
-        
+
     	for (float i = 0.0f; i < txrsiz; i++) {
-    
-    		coords.x = int(t.x);
-    		coords.y = int(t.y);
-    
-    		// calculate transparency
-    		transpPixel = imageLoad(transpTex, coords);   
-    		currentAlpha = (transpPixel.b + transpPixel.g * 10.0 + transpPixel.r * 100.0) / 111.0;
-    			
-    		// calculate color
-    		colorPixel = imageLoad(colorTex, coords);
-    		lightRay.rgb = min(colorPixel.rgb, lightRay.rgb) - (1.0 - currentAlpha) - transmit; 
-    		
-    		currentOutPixel = imageLoad(img_output, coords);
-    		currentOutPixel.rgb = max(currentOutPixel.rgb, lightRay.rgb);
-    		currentOutPixel.a = lightRay.a;
-    		
-    		// write color
-    		imageStore(img_output, coords, currentOutPixel);
-    		//imageStore(img_output, coords, lightRay);
-    
-    		if (currentOutPixel.r + currentOutPixel.g + currentOutPixel.b < 0.1f) break;
-    		if (dot(endPoint - t, dt) < 0.6f) break;
-    		t += dt;
+            coords.x = int(t.x);
+            coords.y = int(t.y);
+            
+            // calculate transparency
+            transpPixel = imageLoad(transpTex, coords);   
+            currentAlpha = (transpPixel.b + transpPixel.g * 10.0 + transpPixel.r * 100.0) / 111.0;
+                
+            // calculate color
+            colorPixel = imageLoad(colorTex, coords);
+            lightRay.rgb = min(colorPixel.rgb, lightRay.rgb) - (1.0 - currentAlpha) - transmit; 
+            
+            currentOutPixel = imageLoad(img_output, coords);
+            currentOutPixel.rgb = max(currentOutPixel.rgb, lightRay.rgb);
+            currentOutPixel.a = lightRay.a;
+            
+            // write color
+            imageStore(img_output, coords, currentOutPixel);
+            //imageStore(img_output, coords, lightRay);
+            
+            if (currentOutPixel.r + currentOutPixel.g + currentOutPixel.b < 0.1f) break;
+            if (dot(endPoint - t, dt) < 0.6f) break;
+            t += dt;
     	}
 	}
 	

@@ -46,7 +46,7 @@ namespace SparrowGame.Shared
             Touch += OnTouch;
             
             // SSBO to send variable length data
-            allLightData = new LightData[10];
+            allLightData = new LightData[20];
             for (int i = 0; i < allLightData.Length; i++)
             {
                 allLightData[i].color.x = 1f;
@@ -86,7 +86,7 @@ namespace SparrowGame.Shared
             for (int i = 0; i < allLightData.Length; i++)
             {
                 allLightData[i].pos.x = _locX;
-                allLightData[i].pos.y = _locY + i * 100;                
+                allLightData[i].pos.y = _locY + i * 200;                
             }
 
             

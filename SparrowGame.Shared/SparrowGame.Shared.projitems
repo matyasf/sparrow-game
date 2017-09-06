@@ -19,4 +19,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)GameMain.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ComputeShaderTest.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)testbg_google.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)testbg_white.png" />
+  </ItemGroup>
 </Project>

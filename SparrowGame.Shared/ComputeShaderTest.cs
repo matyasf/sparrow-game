@@ -16,8 +16,8 @@ namespace SparrowGame.Shared
         private readonly uint _rayProgram;
         private const int TexW = 512;
         private const int TexH = 512;
-        private float _locX;
-        private float _locY;
+        private int _locX;
+        private int _locY;
         
         public ComputeShaderTest() : base(TexW, TexH)
         {
@@ -25,8 +25,8 @@ namespace SparrowGame.Shared
             var texOutput = tt.Base;
 
             EmbeddedResourceLoader loader = new EmbeddedResourceLoader("SparrowGame");
-            Texture bg = SimpleTextureLoader.LoadImageFromStream(loader.GetEmbeddedResourceStream("testbg.png"));
-            Texture transp = SimpleTextureLoader.LoadImageFromStream(loader.GetEmbeddedResourceStream("testbg_transparency.png"));
+            Texture bg = SimpleTextureLoader.LoadImageFromStream(loader.GetEmbeddedResourceStream("testbg_google.png"));
+            Texture transp = SimpleTextureLoader.LoadImageFromStream(loader.GetEmbeddedResourceStream("testbg_google.png"));
 
             Gl.BindImageTexture(0, texOutput, 0, false, 0, Gl.READ_WRITE, Gl.RGBA8);
             Gl.BindImageTexture(1, bg.Base, 0, false, 0, Gl.READ_ONLY, Gl.RGBA8);
@@ -62,14 +62,20 @@ namespace SparrowGame.Shared
             
             Gl.BindBuffer(BufferTargetARB.UniformBuffer, 0); // unbind
         }
-        
+
+        public sealed override Texture Texture
+        {
+            get { return base.Texture; }
+            set { base.Texture = value; }
+        }
+
         [StructLayout(LayoutKind.Sequential)]
         struct LightData
         {
             public const int Size = 32;
             public Vertex4f color; // size = 16
-            public Vertex2f pos;   // size = 4
-            private readonly Vertex2f padding;   // size = 4 Nedeed to pad to a vertex size
+            public Vertex2i pos;   // size = 4
+            private readonly Vertex2i padding;   // size = 4 Nedeed to pad to a vertex size
         }
 
         private LightData[] allLightData;
@@ -109,10 +115,24 @@ namespace SparrowGame.Shared
         {
             if (touch.Touches.Count > 0)
             {
-                _locX = touch.Touches[0].GlobalX;
-                _locY = touch.Touches[0].GlobalY;
+                _locX = (int)touch.Touches[0].GlobalX;
+                _locY = (int)touch.Touches[0].GlobalY;
             }
+            TraceMouse();
             Console.WriteLine(_locX + " " + _locY);
+        }
+
+        private Quad _mousePos;
+
+        private void TraceMouse()
+        {
+            if (_mousePos == null)
+            {
+                _mousePos = new Quad(1,1,0x12ff12);
+                Parent.AddChild(_mousePos);
+            }
+            _mousePos.X = _locX;
+            _mousePos.Y = _locY;
         }
 
 

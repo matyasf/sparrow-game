@@ -16,11 +16,17 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)testbg_transparency.png" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)CustomMesh\CustomStyle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomMesh\CustomEffect.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameMain.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ComputeShaderTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)testbg_google.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)testbg_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CustomMesh\FragShader.frag" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CustomMesh\VertShader.vert" />
   </ItemGroup>
 </Project>

@@ -21,12 +21,12 @@ namespace SparrowGame.Shared
         
         public ComputeShaderTest() : base(TexW, TexH)
         {
-            Texture tt = Texture.Empty(TexW, TexH, false, 0, false, 1.0f, TextureFormat.Rgba8888);
-            var texOutput = tt.Base;
-
             EmbeddedResourceLoader loader = new EmbeddedResourceLoader("SparrowGame");
             Texture bg = SimpleTextureLoader.LoadImageFromStream(loader.GetEmbeddedResourceStream("testbg_google.png"));
-            Texture transp = SimpleTextureLoader.LoadImageFromStream(loader.GetEmbeddedResourceStream("testbg_google.png"));
+            Texture transp = SimpleTextureLoader.LoadImageFromStream(loader.GetEmbeddedResourceStream("testbg_white.png"));
+
+            Texture tt = Texture.Empty(TexW, TexH, false, 0, false, 1.0f, TextureFormat.Rgba8888);
+            var texOutput = tt.Base;
 
             Gl.BindImageTexture(0, texOutput, 0, false, 0, Gl.READ_WRITE, Gl.RGBA8);
             Gl.BindImageTexture(1, bg.Base, 0, false, 0, Gl.READ_ONLY, Gl.RGBA8);
@@ -134,11 +134,5 @@ namespace SparrowGame.Shared
             _mousePos.X = _locX;
             _mousePos.Y = _locY;
         }
-
-
-        /*public override Rectangle BoundsInSpace(DisplayObject targetSpace)
-        {
-            return new Rectangle(0, 0, tex_w, tex_h);
-        }*/
     }
 }

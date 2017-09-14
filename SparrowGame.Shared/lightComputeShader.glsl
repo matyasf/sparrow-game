@@ -57,11 +57,12 @@ void main() {
         
         // draw it only in a circle
         const float PI = 3.1415926535897932384626433832795;
+        const float RAY_LENGTH = 256.0f;
         uint renderNodeNum = global_coords * LOCAL_WG_SIZE * 4u + global_coords2 * LOCAL_WG_SIZE + local_coords;
-        endPoint.x = int(256.0f * sin(float(renderNodeNum) * PI / 1024.0f)) + x0;
+        endPoint.x = int(RAY_LENGTH * sin(float(renderNodeNum) * PI / 1024.0f)) + x0;
         endPoint.x = endPoint.x > txrsiz ? txrsiz : endPoint.x;
         endPoint.x = endPoint.x < 0 ? 0 : endPoint.x;
-        endPoint.y = int(256.0f * cos(float(renderNodeNum) * PI / 1024.0f)) + y0;
+        endPoint.y = int(RAY_LENGTH * cos(float(renderNodeNum) * PI / 1024.0f)) + y0;
         endPoint.y = endPoint.y > txrsiz ? txrsiz : endPoint.y;
         endPoint.y = endPoint.y < 0 ? 0 : endPoint.y;
         
@@ -115,10 +116,10 @@ void main() {
             
             // calculate transparency
             transpPixel = imageLoad(transpTex, coords);   
-            currentAlpha = (transpPixel.b + transpPixel.g * 10.0 + transpPixel.r * 100.0) / 111.0;
+            currentAlpha = (transpPixel.b + transpPixel.g * 10.0f + transpPixel.r * 100.0f) / 111.0f;
             // calculate color
             colorPixel = imageLoad(colorTex, coords);
-            lightRay.rgb = min(colorPixel.rgb, lightRay.rgb) - (1.0 - currentAlpha) - transmit; 
+            lightRay.rgb = min(colorPixel.rgb, lightRay.rgb) - (1.0f - currentAlpha) - transmit; 
             currentOutPixel = imageLoad(img_output, coords);
             currentOutPixel.rgb = max(currentOutPixel.rgb, lightRay.rgb);
             currentOutPixel.a = lightRay.a;

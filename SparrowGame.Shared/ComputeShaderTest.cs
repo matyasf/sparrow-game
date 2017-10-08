@@ -28,11 +28,11 @@ namespace SparrowGame.Shared
             Texture tt = Texture.Empty(TexW, TexH, false, 0, false, 1.0f, TextureFormat.Rgba8888);
             var texOutput = tt.Base;
 
-            Gl.BindImageTexture(0, texOutput, 0, false, 0, Gl.READ_WRITE, Gl.RGBA8);
-            Gl.BindImageTexture(1, bg.Base, 0, false, 0, Gl.READ_ONLY, Gl.RGBA8);
-            Gl.BindImageTexture(2, transp.Base, 0, false, 0, Gl.READ_ONLY, Gl.RGBA8);
+            Gl.BindImageTexture(0, texOutput, 0, false, 0, BufferAccess.ReadWrite, InternalFormat.Rgba8);
+            Gl.BindImageTexture(1, bg.Base, 0, false, 0, BufferAccess.ReadOnly, InternalFormat.Rgba8);
+            Gl.BindImageTexture(2, transp.Base, 0, false, 0, BufferAccess.ReadOnly, InternalFormat.Rgba8);
 
-            uint computeShader = Gl.CreateShader(Gl.COMPUTE_SHADER);
+            uint computeShader = Gl.CreateShader(ShaderType.ComputeShader);
             string shaderStr = loader.GetEmbeddedResourceString("lightComputeShader.glsl");
             Gl.ShaderSource(computeShader, new[] { shaderStr });
             Gl.CompileShader(computeShader);
@@ -56,11 +56,11 @@ namespace SparrowGame.Shared
             }
             
             buffer = Gl.GenBuffer();
-            Gl.BindBufferBase(Gl.UNIFORM_BUFFER, 3, buffer); // bind it to layout binding 3
+            Gl.BindBufferBase(BufferTarget.UniformBuffer, 3, buffer); // bind it to layout binding 3
             uint bSize = (uint) (LightData.Size * allLightData.Length);
-            Gl.BufferData(BufferTargetARB.UniformBuffer, bSize, null, BufferUsageARB.DynamicDraw);
+            Gl.BufferData(BufferTarget.UniformBuffer, bSize, null, BufferUsage.DynamicDraw);
             
-            Gl.BindBuffer(BufferTargetARB.UniformBuffer, 0); // unbind
+            Gl.BindBuffer(BufferTarget.UniformBuffer, 0); // unbind
         }
 
         public sealed override Texture Texture
@@ -96,18 +96,18 @@ namespace SparrowGame.Shared
             }
 
             
-            Gl.BindBufferBase(Gl.UNIFORM_BUFFER, 3, buffer); // bind it to layout binding 3
+            Gl.BindBufferBase(BufferTarget.UniformBuffer, 3, buffer); // bind it to layout binding 3
             uint bSize = (uint) (LightData.Size * allLightData.Length);
-            Gl.BufferData(BufferTargetARB.UniformBuffer, bSize, allLightData, BufferUsageARB.StaticRead);
+            Gl.BufferData(BufferTarget.UniformBuffer, bSize, allLightData, BufferUsage.StaticRead);
            
             int loc = Gl.GetUniformLocation(_rayProgram, "lightNum");
             Gl.Uniform1(loc, (uint)2); // NUM LIGHTS
             
-            Gl.BindBuffer(BufferTargetARB.UniformBuffer, 0); // unbind
+            Gl.BindBuffer(BufferTarget.UniformBuffer, 0); // unbind
             
             Gl.DispatchCompute(4, 4, 1); // 4x4 = 16 work groups
             // make sure writing to image has finished before read. Put this as close to the tex sampler code as possible
-            Gl.MemoryBarrier(Gl.SHADER_IMAGE_ACCESS_BARRIER_BIT);
+            Gl.MemoryBarrier(MemoryBarrierMask.ShaderImageAccessBarrierBit);
             base.Render(painter);
         }
                 

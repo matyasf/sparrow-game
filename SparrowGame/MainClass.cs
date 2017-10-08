@@ -10,15 +10,15 @@ namespace SparrowGame
 		[STAThread]
 		public static void Main()
 		{
-			if (Environment.OSVersion.Version.Major >= 6) SetProcessDPIAware();
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+			//if (Environment.OSVersion.Version.Major >= 6) SetProcessDPIAware();
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
 
-            DesktopViewController dvc = new DesktopViewController (typeof(GameMain), 960, 640);
-            Application.Run(dvc);
+            System.Windows.Application app = new System.Windows.Application();
+            app.Run(new DesktopViewController(typeof(GameMain), 960, 640));
         }
 
-		[System.Runtime.InteropServices.DllImport("user32.dll")]
-		private static extern bool SetProcessDPIAware();
+		//[System.Runtime.InteropServices.DllImport("user32.dll")]
+		//private static extern bool SetProcessDPIAware();
 	}
 }

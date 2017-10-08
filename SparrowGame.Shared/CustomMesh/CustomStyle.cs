@@ -9,17 +9,5 @@ namespace SparrowGame.Shared.CustomMesh
         {
             return new CustomEffect();
         }
-
-        /*
-        public override void UpdateEffect(MeshEffect effect, RenderState state)
-        {
-            base.UpdateEffect(effect, state);
-        }
-
-        public override void CopyFrom(MeshStyle meshStyle)
-        {
-            base.CopyFrom(meshStyle);
-        }
-        */
     }
 }

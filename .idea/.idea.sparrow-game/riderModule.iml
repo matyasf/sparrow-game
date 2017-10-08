@@ -18,6 +18,11 @@
       <excludeFolder url="file://$MODULE_DIR$/../../../sparrow-sharp/SparrowShared/bin" />
       <excludeFolder url="file://$MODULE_DIR$/../../../sparrow-sharp/SparrowShared/obj" />
     </content>
+    <content url="file://$MODULE_DIR$/../../../sparrow-sharp/SparrowSharp.Android">
+      <sourceFolder url="file://$MODULE_DIR$/../../../sparrow-sharp/SparrowSharp.Android" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../sparrow-sharp/SparrowSharp.Android/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../sparrow-sharp/SparrowSharp.Android/obj" />
+    </content>
     <content url="file://$MODULE_DIR$/../../../sparrow-sharp/SparrowSharp.Desktop">
       <sourceFolder url="file://$MODULE_DIR$/../../../sparrow-sharp/SparrowSharp.Desktop" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/../../../sparrow-sharp/SparrowSharp.Desktop/bin" />

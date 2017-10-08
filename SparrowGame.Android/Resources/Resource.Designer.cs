@@ -26,6 +26,8 @@ namespace SparrowGame
 		
 		public static void UpdateIdValues()
 		{
+			global::Sparrow.Droid.Resource.String.ApplicationName = global::SparrowGame.Resource.String.ApplicationName;
+			global::Sparrow.Droid.Resource.String.Hello = global::SparrowGame.Resource.String.Hello;
 		}
 		
 		public partial class Attribute

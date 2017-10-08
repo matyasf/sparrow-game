@@ -12,10 +12,8 @@ namespace SparrowGame.Shared.CustomMesh
         protected override Program CreateProgram()
         {
             EmbeddedResourceLoader loader = new EmbeddedResourceLoader("SparrowGame");
-            string frag = AddShaderInitCode() + "\n" +
-                loader.GetEmbeddedResourceString("FragShader.frag");
-            string vert = AddShaderInitCode() + "\n" + 
-                loader.GetEmbeddedResourceString("VertShader.vert");
+            string frag = AddShaderInitCode() + loader.GetEmbeddedResourceString("FragShader.frag");
+            string vert = AddShaderInitCode() + loader.GetEmbeddedResourceString("VertShader.vert");
             return new Program(vert, frag);
         }
 

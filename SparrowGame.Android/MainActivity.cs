@@ -3,7 +3,7 @@ using Android.Views;
 using Android.OS;
 using Android.Content.PM;
 using Sparrow.Core;
-using Sparrow.Samples;
+using SparrowGame.Shared;
 
 namespace SparrowGame
 {

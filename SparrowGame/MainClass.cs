@@ -1,7 +1,6 @@
 ﻿using System;
 using Sparrow.Core;
 using SparrowGame.Shared;
-using System.Windows.Forms;
 
 namespace SparrowGame
 {
@@ -10,6 +9,7 @@ namespace SparrowGame
 		[STAThread]
 		public static void Main()
 		{
+			
 			//if (Environment.OSVersion.Version.Major >= 6) SetProcessDPIAware();
             //Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);

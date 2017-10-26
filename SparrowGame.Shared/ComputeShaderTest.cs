@@ -1,6 +1,4 @@
 ﻿
-using System;
-using System.Runtime.InteropServices;
 using Sparrow.Display;
 using Sparrow.ResourceLoading;
 using Sparrow.Textures;
@@ -19,6 +17,15 @@ namespace SparrowGame.Shared
         private int _locX;
         private int _locY;
         
+        private readonly LightData[] allLightData;
+        private struct LightData
+        {
+            public Vertex4f color;
+            public Vertex2i pos;
+            private readonly Vertex2i padding;
+        }
+
+        
         public ComputeShaderTest() : base(TexW, TexH)
         {
             EmbeddedResourceLoader loader = new EmbeddedResourceLoader("SparrowGame");
@@ -33,7 +40,8 @@ namespace SparrowGame.Shared
             Gl.BindImageTexture(2, transp.Base, 0, false, 0, BufferAccess.ReadOnly, InternalFormat.Rgba8);
 
             uint computeShader = Gl.CreateShader(ShaderType.ComputeShader);
-            string shaderStr = loader.GetEmbeddedResourceString("lightComputeShader.glsl");
+            //string shaderStr = loader.GetEmbeddedResourceString("lightComputeShader.glsl");
+            string shaderStr = loader.GetEmbeddedResourceString("lightComputeShaderOneLight.glsl");
             Gl.ShaderSource(computeShader, new[] { shaderStr });
             Gl.CompileShader(computeShader);
 
@@ -46,7 +54,7 @@ namespace SparrowGame.Shared
             Touch += OnTouch;
             
             // SSBO to send variable length data
-            allLightData = new LightData[20];
+            allLightData = new LightData[2];
             for (int i = 0; i < allLightData.Length; i++)
             {
                 allLightData[i].color.x = 1f;
@@ -54,32 +62,7 @@ namespace SparrowGame.Shared
                 allLightData[i].color.z = 1f;
                 allLightData[i].color.w = 1f;                
             }
-            
-            buffer = Gl.GenBuffer();
-            Gl.BindBufferBase(BufferTarget.UniformBuffer, 3, buffer); // bind it to layout binding 3
-            uint bSize = (uint) (LightData.Size * allLightData.Length);
-            Gl.BufferData(BufferTarget.UniformBuffer, bSize, null, BufferUsage.DynamicDraw);
-            
-            Gl.BindBuffer(BufferTarget.UniformBuffer, 0); // unbind
         }
-
-        public sealed override Texture Texture
-        {
-            get { return base.Texture; }
-            set { base.Texture = value; }
-        }
-
-        [StructLayout(LayoutKind.Sequential)]
-        struct LightData
-        {
-            public const int Size = 32;
-            public Vertex4f color; // size = 16
-            public Vertex2i pos;   // size = 4
-            private readonly Vertex2i padding;   // size = 4 Nedeed to pad to a vertex size
-        }
-
-        private LightData[] allLightData;
-        private uint buffer;
 
         public override void Render(Painter painter)
         {
@@ -92,22 +75,20 @@ namespace SparrowGame.Shared
             for (int i = 0; i < allLightData.Length; i++)
             {
                 allLightData[i].pos.x = _locX;
-                allLightData[i].pos.y = _locY + i * 200;                
+                allLightData[i].pos.y = _locY + i * 110;
+                
+                // light position
+                int loc = Gl.GetUniformLocation(_rayProgram, "lightPos");
+                Gl.Uniform2(loc, allLightData[i].pos.x, allLightData[i].pos.y);
+                // light color
+                loc = Gl.GetUniformLocation(_rayProgram, "lightColor");
+                Gl.Uniform4(loc, allLightData[i].color.x, allLightData[i].color.y, allLightData[i].color.z, allLightData[i].color.w);
+            
+                Gl.DispatchCompute(4, 4, 1); // work groups
+                // make sure writing to image has finished before read. Put this as close to the tex sampler code as possible
+                Gl.MemoryBarrier(MemoryBarrierMask.ShaderImageAccessBarrierBit);
             }
-
             
-            Gl.BindBufferBase(BufferTarget.UniformBuffer, 3, buffer); // bind it to layout binding 3
-            uint bSize = (uint) (LightData.Size * allLightData.Length);
-            Gl.BufferData(BufferTarget.UniformBuffer, bSize, allLightData, BufferUsage.StaticRead);
-           
-            int loc = Gl.GetUniformLocation(_rayProgram, "lightNum");
-            Gl.Uniform1(loc, (uint)2); // NUM LIGHTS
-            
-            Gl.BindBuffer(BufferTarget.UniformBuffer, 0); // unbind
-            
-            Gl.DispatchCompute(4, 4, 1); // 4x4 = 16 work groups
-            // make sure writing to image has finished before read. Put this as close to the tex sampler code as possible
-            Gl.MemoryBarrier(MemoryBarrierMask.ShaderImageAccessBarrierBit);
             base.Render(painter);
         }
                 
@@ -118,21 +99,7 @@ namespace SparrowGame.Shared
                 _locX = (int)touch.Touches[0].GlobalX;
                 _locY = (int)touch.Touches[0].GlobalY;
             }
-            TraceMouse();
-            Console.WriteLine(_locX + " " + _locY);
-        }
-
-        private Quad _mousePos;
-
-        private void TraceMouse()
-        {
-            if (_mousePos == null)
-            {
-                _mousePos = new Quad(1,1,0x12ff12);
-                Parent.AddChild(_mousePos);
-            }
-            _mousePos.X = _locX;
-            _mousePos.Y = _locY;
+            //Debug.WriteLine(_locX + " " + _locY);
         }
     }
 }

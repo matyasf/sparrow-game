@@ -1,33 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="RIDER_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$/../..">
-      <sourceFolder url="file://$MODULE_DIR$/../../SparrowGame" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../SparrowGame.Android" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../SparrowGame.Shared" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/../../SparrowGame.Android/bin" />
-      <excludeFolder url="file://$MODULE_DIR$/../../SparrowGame.Android/obj" />
-      <excludeFolder url="file://$MODULE_DIR$/../../SparrowGame.Shared/bin" />
-      <excludeFolder url="file://$MODULE_DIR$/../../SparrowGame.Shared/obj" />
-      <excludeFolder url="file://$MODULE_DIR$/../../SparrowGame/bin" />
-      <excludeFolder url="file://$MODULE_DIR$/../../SparrowGame/obj" />
-      <excludeFolder url="file://$MODULE_DIR$/../../packages" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../../sparrow-sharp/SparrowShared">
-      <sourceFolder url="file://$MODULE_DIR$/../../../sparrow-sharp/SparrowShared" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/../../../sparrow-sharp/SparrowShared/bin" />
-      <excludeFolder url="file://$MODULE_DIR$/../../../sparrow-sharp/SparrowShared/obj" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../../sparrow-sharp/SparrowSharp.Android">
-      <sourceFolder url="file://$MODULE_DIR$/../../../sparrow-sharp/SparrowSharp.Android" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/../../../sparrow-sharp/SparrowSharp.Android/bin" />
-      <excludeFolder url="file://$MODULE_DIR$/../../../sparrow-sharp/SparrowSharp.Android/obj" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../../sparrow-sharp/SparrowSharp.Desktop">
-      <sourceFolder url="file://$MODULE_DIR$/../../../sparrow-sharp/SparrowSharp.Desktop" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/../../../sparrow-sharp/SparrowSharp.Desktop/bin" />
-      <excludeFolder url="file://$MODULE_DIR$/../../../sparrow-sharp/SparrowSharp.Desktop/obj" />
-    </content>
+    <content url="file://$MODULE_DIR$/../.." />
+    <content url="file://$MODULE_DIR$/../../../sparrow-sharp/SparrowShared" />
+    <content url="file://$MODULE_DIR$/../../../sparrow-sharp/SparrowSharp.Android" />
+    <content url="file://$MODULE_DIR$/../../../sparrow-sharp/SparrowSharp.Desktop" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

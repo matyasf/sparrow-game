@@ -12,6 +12,7 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)benchmark_object.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)bigstar.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)lightComputeShader.glsl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)lightComputeShaderOneLight.glsl" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)testbg.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)testbg_transparency.png" />
   </ItemGroup>

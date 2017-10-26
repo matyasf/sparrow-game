@@ -1,5 +1,5 @@
-﻿#version 310 es
-//#version 450
+﻿//#version 310 es
+#version 450
 // what if a light source comes in from outside of the map? -- it needs much bigger tex size (~1500x1500) and just a small part is visible
 #define MAX_NUM_TOTAL_LIGHTS 20            
 #define LOCAL_WG_SIZE 128u
@@ -21,6 +21,8 @@ layout (std140, binding = 3) uniform Lights {
 uniform uint lightNum;
 
 void main() {
+barrier();
+memoryBarrier();
     uint global_coords = gl_WorkGroupID.x; // postion in global work group; 0 = left, 1 = right, 2 = top, 3 = bottom
     uint global_coords2 = gl_WorkGroupID.y; // position in second global wg, determines which segment to render (0..3)
     uint local_coords = gl_LocalInvocationID.x; // * 0.5f; // get position in local work group (0...127)
@@ -51,6 +53,7 @@ void main() {
     float currentAlpha;
    
     for (uint i = 0u; i < lightNum; i++) {
+        
         vec4 lightRay = light[i].lightColor; // initial light color
         int x0 = light[i].lightPos.x;
         int y0 = light[i].lightPos.y;
@@ -108,6 +111,7 @@ void main() {
         */
         
         // vector approximation. Works, but has moire artifacts.
+        
         vec2 dt = normalize(vec2(endPoint - light[i].lightPos));
         vec2 t = vec2(light[i].lightPos);
     	for (int k = 0; k < 256; k++) {
@@ -131,7 +135,8 @@ void main() {
             if (dot(vec2(endPoint) - t, dt) < 0.6f) break;
             t += dt;
     	}
-
+    	
+    	// barrier(); does not work because its inside a control structure?
 	}
 }
 

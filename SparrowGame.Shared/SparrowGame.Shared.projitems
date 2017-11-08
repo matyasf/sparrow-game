@@ -21,6 +21,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)CustomMesh\CustomEffect.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameMain.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ComputeShaderTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SampleMovingStuff.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)testbg_google.png" />
@@ -29,5 +30,8 @@
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)CustomMesh\FragShader.frag" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)CustomMesh\VertShader.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)testbg_google_16.png" />
   </ItemGroup>
 </Project>

@@ -22,25 +22,31 @@ namespace SparrowGame.Shared
         {
             public Vertex4f color;
             public Vertex2i pos;
-            private readonly Vertex2i padding;
         }
 
+        private RenderTexture backgroundColorTex;
+        private Quad bg;
+        private SampleMovingStuff enemy;
         
         public ComputeShaderTest() : base(TexW, TexH)
         {
+            enemy = new SampleMovingStuff();
+            backgroundColorTex = new RenderTexture(512, 512, false);
+            
             EmbeddedResourceLoader loader = new EmbeddedResourceLoader("SparrowGame");
-            Texture bg = SimpleTextureLoader.LoadImageFromStream(loader.GetEmbeddedResourceStream("testbg_google.png"));
+            Texture bgTex = SimpleTextureLoader.LoadImageFromStream(loader.GetEmbeddedResourceStream("testbg_google.png"));
+            bg = new Quad(512, 512);
+            bg.Texture = bgTex;
+            
             Texture transp = SimpleTextureLoader.LoadImageFromStream(loader.GetEmbeddedResourceStream("testbg_white.png"));
 
             Texture tt = Texture.Empty(TexW, TexH, false, 0, false, 1.0f, TextureFormat.Rgba8888);
-            var texOutput = tt.Base;
 
-            Gl.BindImageTexture(0, texOutput, 0, false, 0, BufferAccess.ReadWrite, InternalFormat.Rgba8);
-            Gl.BindImageTexture(1, bg.Base, 0, false, 0, BufferAccess.ReadOnly, InternalFormat.Rgba8);
+            Gl.BindImageTexture(0, tt.Base, 0, false, 0, BufferAccess.ReadWrite, InternalFormat.Rgba8);
+            Gl.BindImageTexture(1, backgroundColorTex.Base, 0, false, 0, BufferAccess.ReadWrite, InternalFormat.Rgba8);
             Gl.BindImageTexture(2, transp.Base, 0, false, 0, BufferAccess.ReadOnly, InternalFormat.Rgba8);
 
             uint computeShader = Gl.CreateShader(ShaderType.ComputeShader);
-            //string shaderStr = loader.GetEmbeddedResourceString("lightComputeShader.glsl");
             string shaderStr = loader.GetEmbeddedResourceString("lightComputeShaderOneLight.glsl");
             Gl.ShaderSource(computeShader, new[] { shaderStr });
             Gl.CompileShader(computeShader);
@@ -53,7 +59,6 @@ namespace SparrowGame.Shared
 
             Touch += OnTouch;
             
-            // SSBO to send variable length data
             allLightData = new LightData[2];
             for (int i = 0; i < allLightData.Length; i++)
             {
@@ -68,8 +73,15 @@ namespace SparrowGame.Shared
         {
             painter.ExcludeFromCache(this);
             
-            Texture.Root.Clear(0,1);
+            // render background
+            backgroundColorTex.DrawBundled(delegate
+            {
+                backgroundColorTex.Draw(bg);
+                backgroundColorTex.Draw(enemy);
+            });
             
+            // render lights
+            Texture.Root.Clear(0,1);
             Gl.UseProgram(_rayProgram);
 
             for (int i = 0; i < allLightData.Length; i++)
@@ -84,7 +96,7 @@ namespace SparrowGame.Shared
                 loc = Gl.GetUniformLocation(_rayProgram, "lightColor");
                 Gl.Uniform4(loc, allLightData[i].color.x, allLightData[i].color.y, allLightData[i].color.z, allLightData[i].color.w);
             
-                Gl.DispatchCompute(4, 4, 1); // work groups
+                Gl.DispatchCompute(4, 4, 1);
                 // make sure writing to image has finished before read. Put this as close to the tex sampler code as possible
                 Gl.MemoryBarrier(MemoryBarrierMask.ShaderImageAccessBarrierBit);
             }
@@ -99,7 +111,6 @@ namespace SparrowGame.Shared
                 _locX = (int)touch.Touches[0].GlobalX;
                 _locY = (int)touch.Touches[0].GlobalY;
             }
-            //Debug.WriteLine(_locX + " " + _locY);
         }
     }
 }
